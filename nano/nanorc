@@ -1,0 +1,56 @@
+## Global options
+set autoindent
+set functioncolor white
+set keycolor white,lightblack
+set indicator
+set jumpyscrolling
+set linenumbers
+set mouse
+set multibuffer
+set numbercolor italic,lightblack
+set statuscolor white,lightblack
+set suspendable
+set titlecolor white,lightblack
+
+## Syntax Highlighting
+include /usr/share/nano/*.nanorc
+include /usr/share/nano-syntax-highlighting/*.nanorc
+
+## Keybindings
+unbind ^C all
+unbind ^K main
+unbind ^N main
+unbind ^U all
+unbind ^Y all
+unbind ^Z main
+
+unbind M-J main
+unbind M-T main
+unbind M-Y main
+
+bind ^A mark main
+bind ^B wherewas all
+bind ^C copy main
+bind ^D findprevious all
+bind ^F whereis all
+bind ^G findnext all
+bind ^O insert main
+bind ^P curpos main
+bind ^Q exit all
+bind ^R replace main
+bind ^S savefile main
+bind ^T gotoline main
+bind ^T gotodir browser
+bind ^V paste all
+bind ^W writeout main
+bind ^X cut all
+bind ^Y redo main
+bind ^Z undo main
+bind ^/ help all
+bind ^/ exit help
+
+bind M-X cancel all
+bind M-U undo main
+bind M-R redo main
+bind M-Y speller main
+bind Sh-M-Z suspend all
