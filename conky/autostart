@@ -1,0 +1,4 @@
+#!/bin/sh
+
+conky --quiet --daemonize &
+conky --quiet --daemonize -c ~/.config/conky/watermark.conf & exit
