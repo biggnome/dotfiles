@@ -38,3 +38,7 @@ autocmd BufWritePre * %s/\s\+$//e           " remove trailing spaces
 augroup AutoBlockComment
     autocmd! FileType c,cpp setlocal comments -=:// comments +=f://
 augroup END
+
+" netrw odds 'n ends
+let g:netrw_browse_split = 4
+let g:netrw_winsize = 33
