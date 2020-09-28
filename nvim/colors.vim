@@ -1,4 +1,4 @@
-let $theme="ayu"
+let $theme="ayu"                    " Hey dingus! Default colorscheme goes here!
 
 if has('nvim') || has('termguicolors')
   set termguicolors
@@ -8,10 +8,9 @@ if has('nvim') || has('termguicolors')
 endif
 
 if filereadable(expand("~/.vimrc_background"))
-"  let base16colorspace=256          " Remove this line if not necessary
   source ~/.vimrc_background
 else
-    colorscheme $theme
+    colorscheme $theme              " Set colorscheme absent alacritty confih
 endif
 
 let g:lightline = { 'colorscheme': 'ayu'}
