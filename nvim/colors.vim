@@ -13,4 +13,4 @@ else
     colorscheme $theme              " Set colorscheme absent alacritty confih
 endif
 
-let g:lightline = { 'colorscheme': 'ayu'}
+let g:lightline = { 'colorscheme': $theme }
