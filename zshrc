@@ -127,8 +127,10 @@ alias df='df -h'		# Human-readable sizes
 alias free='free -h'
 alias rm='rm -ri'
 alias mv='mv -i'
+alias find='fd -H'
 
 alias vim='nvim'
+alias cl='git clone'
 
 alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
