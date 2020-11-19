@@ -127,7 +127,7 @@ alias df='df -h'		# Human-readable sizes
 alias free='free -h'
 alias rm='rm -ri'
 alias mv='mv -i'
-alias find='fd -H'
+alias find='fd -H -E /timeshift/'
 
 alias vim='nvim'
 alias cl='git clone'
