@@ -10,7 +10,7 @@ endif
 if filereadable(expand("~/.vimrc_background"))
   source ~/.vimrc_background
 else
-    colorscheme $theme              " Set colorscheme absent alacritty confih
+    colorscheme $theme              " Set colorscheme absent alacritty config
 endif
 
 let g:lightline = { 'colorscheme': $theme }
