@@ -118,26 +118,27 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias ls='colorls'		# Pretty!
+
+# Pretty!
+alias ls='colorls'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
-alias cp='cp -i'		# Don't do anything rash with cp
-alias df='df -h'		# Human-readable sizes
+# Human-readable sizes
+alias df='df -h'
 alias free='free -h'
+# Don't do anything rash with cp, rm, or mv
+alias cp='cp -i'
 alias rm='rm -rI'
 alias mv='mv -i'
-alias find='fd -H -E /timeshift/'
-
+# Shorthand commands
 alias vim='nvim'
 alias cl='git clone'
-
+alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
-
-alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc'
-alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"
-
+alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
+alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
 alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
