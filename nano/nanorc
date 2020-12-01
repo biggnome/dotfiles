@@ -8,6 +8,7 @@ set linenumbers
 set mouse
 set multibuffer
 set numbercolor italic,lightblack
+set scrollercolor lightblack
 set statuscolor white,lightblack
 set suspendable
 set titlecolor white,lightblack
