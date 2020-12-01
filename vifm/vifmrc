@@ -486,3 +486,6 @@ nnoremap <f8> :delete<cr>
 "     vifm --server-name "$VIFM_SERVER_NAME" --remote +"cd '$PWD'"
 "
 " let $VIFM_SERVER_NAME = v:servername
+
+" Incorporate icons from https://github.com/cirala/vifm_devicons 
+source ~/.config/vifm/favicons.vifm
