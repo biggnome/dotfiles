@@ -21,13 +21,15 @@ nnoremap <M-l>      :vertical resize +2<CR>
 map <M-s>		<C-w>s
 map <M-S>		<C-w>v
 
-" Normal-person copy, cut, paste, save, quit
+" Normal-person copy, cut, paste, save, quit, undo/redo
 vmap <C-c>      y
 vmap <C-x>      x
-imap <C-v>      <esc>P
-nnoremap <C-v>  <esc>P
+imap <C-v>      <esc>p
+nnoremap <C-v>  <esc>p
 nnoremap <C-s>  :w<CR>
-nnoremap <C-Q>  :wq!<CR>
+nnoremap <C-q>  :wq!<CR>
+map <C-z>       <esc>u
+map <C-y>       <esc><C-r>
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
