@@ -172,34 +172,34 @@ draw_bold_text_with_bright_colors: true
 
 # Colors
 colors:
-  # COLORSCHEME: nord.yml
+  # COLORSCHEME: ayu.yaml
   # Default colors
   primary:
     # hard contrast: background = '0x1d2021'
-    background: '0x2E3440'
-    foreground: '0xD8DEE9'
+    background: '0x1f2430'
+    foreground: '0xcbccc6'
 
   # Normal colors
   normal:
-    black: '0x3B4252'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x88C0D0'
-    white: '0xE5E9F0'
+    black: '0x232834'
+    red: '0xff3333'
+    green: '0xbae67e'
+    yellow: '0xffa759'
+    blue: '0x5ccfe6'
+    magenta: '0xd4bfff'
+    cyan: '0x95e6cb'
+    white: '0xcbccc6'
 
   # Bright colors
   bright:
-    black: '0x4C566A'
-    red: '0xBF616A'
-    green: '0xA3BE8C'
-    yellow: '0xEBCB8B'
-    blue: '0x81A1C1'
-    magenta: '0xB48EAD'
-    cyan: '0x8FBCBB'
-    white: '0xECEFF4'
+    black: '0x707a8c'
+    red: '0xf51818'
+    green: '0x86b300'
+    yellow: '0xfa8d3e'
+    blue: '0x39bae6'
+    magenta: '0xa37acc'
+    cyan: '0x95e6cb'
+    white: '0xfafafa'
   dim:
     black: '0x31363b'
     red: '0x783228'
@@ -212,8 +212,8 @@ colors:
   cursor:
     text: '0xff271d'
     cursor: '0xfbfcfc'
-
-background_opacity: 0.93
+  # Normal colors
+background_opacity: 0.95
 
 #selection:
   #semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"

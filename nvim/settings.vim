@@ -44,6 +44,7 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 33
 
 " Scrollbar settings
+let g:scroll_bar_update_time=30
 let g:scroll_bar_thumb_char = '█'
 let g:scroll_bar_line_char = '│'
 hi Scrollbar_Thumb guibg=NONE guifg=#3D4751 ctermbg=NONE ctermfg=8
