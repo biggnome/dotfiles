@@ -1,6 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
+    Plug 'zarainia/vim-scrollbar'
     Plug 'vifm/vifm.vim'
-"    Plug 'preservim/nerdtree'
     Plug 'itchyny/lightline.vim'
     Plug 'tpope/vim-surround'
     Plug 'ap/vim-css-color'
