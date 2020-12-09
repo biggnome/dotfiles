@@ -99,6 +99,7 @@ plugins=(
 export SUDO_EDITOR='nvim'
 export VISUAL='nvim'
 export EDITOR='nvim'
+export MICRO_TRUECOLOR=1
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
