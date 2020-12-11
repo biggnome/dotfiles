@@ -22,14 +22,18 @@ map <M-s>		<C-w>s
 map <M-S>		<C-w>v
 
 " Normal-person copy, cut, paste, save, quit, undo/redo
-vmap <C-c>      y
-vmap <C-x>      x
+vmap <C-c>      y               " Copy
+vmap <C-x>      x               " Cut
+nmap <C-v>      p               " Paste
 imap <C-v>      <esc>p
-nnoremap <C-v>  <esc>p
-nnoremap <C-s>  :w<CR>
-nnoremap <C-q>  :wq!<CR>
-map <C-z>       <esc>u
-map <C-y>       <esc><C-r>
+nmap <C-s>      :w<CR>          " Save
+imap <C-s>      <esc>:w<CR>
+nmap <C-w>      :wq!<CR>        " Save 'n quit
+imap <C-w>      <esc>:wq!<CR>
+nmap <C-q>      :q<CR>          " Quit
+imap <C-q>      <esc>:q<CR>
+map <C-z>       <esc>u          " Undo
+map <C-y>       <esc><C-r>      " Redo
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>

@@ -1,0 +1,10 @@
+{
+    "autosu": true,
+    "colorscheme": "ayu-tc",
+    "mkparents": true,
+    "rmtrailingws": true,
+    "scrollbar": true,
+    "statusformatl": "$(filename) $(modified)($(line),$(col)) $(status.paste)| ft:$(opt:filetype)",
+    "tabmovement": true,
+    "tabstospaces": true
+}

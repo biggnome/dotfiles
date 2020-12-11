@@ -4,7 +4,7 @@ set more                                    " ---more--- like less
 set mouse=a                                 " mouse navigation everywhere
 set nobackup                                " no auto backups
 set number                                  " line numbers
-set relativenumber                          " relative line number
+" set relativenumber                          " relative line number
 set scrolloff=3                             " lines above/below cursor
 set showcmd                                 " show cmds being typed
 set splitbelow splitright
