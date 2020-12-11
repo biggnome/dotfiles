@@ -37,3 +37,6 @@ map <C-y>       <esc><C-r>      " Redo
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
+
+" Toggle word wrap
+map <M-w>       <esc>:set wrap!<CR>
