@@ -77,7 +77,7 @@ HYPHEN_INSENSITIVE="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	# git
-	colored-man-pages
+	colored-man-pages-mod
 	zsh-autosuggestions
 	fast-syntax-highlighting
 )
@@ -102,7 +102,7 @@ export EDITOR='nvim'
 export MICRO_TRUECOLOR=1
 
 # Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+export ARCHFLAGS="-arch x86_64"
 
 ZSH_CACHE_DIR=$HOME/.cache/oh-my-zsh
 if [[ ! -d $ZSH_CACHE_DIR ]]; then
