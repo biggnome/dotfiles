@@ -68,7 +68,7 @@ HYPHEN_INSENSITIVE="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
+# ZSH_CUSTOM=~/.config/zsh/
 
 # Which plugins would you like to load?
 # Standard plugins can be found in ~/.oh-my-zsh/plugins/*
@@ -76,12 +76,14 @@ HYPHEN_INSENSITIVE="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-	# git
-	colored-man-pages-mod
+    alias-finder
+	git
+	colored-man-pages-alt
+    sudo
+    z
 	zsh-autosuggestions
 	fast-syntax-highlighting
 )
-
 
 # User configuration
 
@@ -99,7 +101,7 @@ plugins=(
 export SUDO_EDITOR='nvim'
 export VISUAL='nvim'
 export EDITOR='nvim'
-export MICRO_TRUECOLOR=1
+export MICRO_TRUECOLOR=1    # Enable true color mode for micro editor
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -134,7 +136,6 @@ alias rm='rm -rI'
 alias mv='mv -i'
 # Shorthand commands
 alias vim='nvim'
-alias cl='git clone'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
@@ -143,7 +144,6 @@ alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk 
 alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
-alias avara-config='nvim ~/.local/share/Avaraline/Avara/prefs.json'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
