@@ -68,13 +68,13 @@ HYPHEN_INSENSITIVE="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Do not enter command lines into the history list if they are duplicates of the previous event
-HIST_IGNORE_DUPS
+setopt HIST_IGNORE_DUPS
 
 # When searching history don't display results already cycled through twice
-HIST_FIND_NO_DUPS
+setopt HIST_FIND_NO_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
-HIST_REDUCE_BLANKS
+setopt HIST_REDUCE_BLANKS
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=~/.config/zsh/
