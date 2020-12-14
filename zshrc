@@ -68,13 +68,13 @@ HYPHEN_INSENSITIVE="true"
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Do not enter command lines into the history list if they are duplicates of the previous event
-setopt HIST_IGNORE_DUPS
+HIST_IGNORE_DUPS
 
 # When searching history don't display results already cycled through twice
-setopt HIST_FIND_NO_DUPS
+HIST_FIND_NO_DUPS
 
 # Remove superfluous blanks from each command line being added to the history list
-setopt HIST_REDUCE_BLANKS
+HIST_REDUCE_BLANKS
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=~/.config/zsh/
@@ -86,12 +86,12 @@ setopt HIST_REDUCE_BLANKS
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     alias-finder
-	git
-	colored-man-pages-alt   # prettier version from ael-code/zsh-colored-man-pages
+    git
+    colored-man-pages-alt   # prettier version from ael-code/zsh-colored-man-pages
     sudo
     z
-	zsh-autosuggestions
-	fast-syntax-highlighting
+    zsh-autosuggestions
+    fast-syntax-highlighting
 )
 
 # User configuration
