@@ -86,6 +86,7 @@ setopt HIST_REDUCE_BLANKS
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     alias-finder
+    calc                    # in-shell calculator (via "=" command) from arzzen/calc.plugin.zsh
     git
     colored-man-pages-alt   # prettier version from ael-code/zsh-colored-man-pages
     sudo
