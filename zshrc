@@ -154,6 +154,7 @@ alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk 
 alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
+alias powertop='sudo powertop'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
