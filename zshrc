@@ -137,6 +137,9 @@ alias ls='colorls'
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
+function chpwd() {  # ls that sucker whenever working directory changes
+    colorls
+}
 # Human-readable sizes
 alias df='df -h'
 alias free='free -h'
@@ -155,6 +158,8 @@ alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
+# Wanton frivolity
+alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
