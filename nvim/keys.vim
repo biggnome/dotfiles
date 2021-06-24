@@ -40,3 +40,6 @@ map <C-o> :Vifm<CR>
 
 " Toggle word wrap
 map <M-w>       <esc>:set wrap!<CR>
+
+" Save & compile SILE document
+map <C-b>       <esc>:w<CR>:!sile %<CR>
