@@ -49,3 +49,11 @@ let g:scroll_bar_thumb_char = '█'
 let g:scroll_bar_line_char = '│'
 hi Scrollbar_Thumb guibg=NONE guifg=#3D4751 ctermbg=NONE ctermfg=8
 hi Scrollbar_Line guibg=NONE guifg=#3D4751 ctermbg=NONE ctermfg=8
+" For nvim 5+
+augroup ScrollbarInit
+  autocmd!
+  autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
+  autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
+  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+augroup end
+
