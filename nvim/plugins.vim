@@ -8,5 +8,5 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tpope/vim-surround'
     Plug 'vifm/vifm.vim'
     Plug 'Xuyuanp/scrollbar.nvim'
-    Plug 'zarainia/vim-scrollbar'
+"    Plug 'zarainia/vim-scrollbar'
 call plug#end()
