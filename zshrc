@@ -150,6 +150,7 @@ alias mv='mv -i'
 # Shorthand commands
 alias vim='nvim'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
+alias ack='ag'
 alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up

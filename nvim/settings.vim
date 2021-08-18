@@ -56,5 +56,12 @@ augroup ScrollbarInit
   autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
   autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
+
+  " let g:scrollbar_shape = { 'body': '•' }
 augroup end
+
+" Minimap settings
+let g:minimap_width = 10
+let g:minimap_auto_start = 1
+let g:minimap_auto_start_win_enter = 1
 
