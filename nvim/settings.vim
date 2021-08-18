@@ -57,7 +57,7 @@ augroup ScrollbarInit
   autocmd WinEnter,FocusGained           * silent! lua require('scrollbar').show()
   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 
-  " let g:scrollbar_shape = { 'body': '•' }
+  let g:scrollbar_shape = { 'body': '▒' }
 augroup end
 
 " Minimap settings
