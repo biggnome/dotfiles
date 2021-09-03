@@ -43,4 +43,5 @@ map <M-z>       <esc>:set wrap!<CR>
 
 " Save & compile SILE document
 map <C-b>       <esc>:w<CR>:!sile %<CR>
-nmap \          i\              " Just enter a freakin' slash and start typing 'cause I'm a bonehead
+" Just enter a freakin' slash and start typing 'cause I'm a bonehead
+nmap \          i\
