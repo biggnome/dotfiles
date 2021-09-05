@@ -1,8 +1,8 @@
 " Navigation
-map <C-Left>    <C-w>h
+map <C-Left>    " <C-w>h
 map <C-Down>    <C-w>j
 map <C-Up>      <C-w>k
-map <C-Right>   <C-w>l
+map <C-Right>   " <C-w>l
 map <C-h>       <C-w>h
 map <C-j>       <C-w>j
 map <C-k>       <C-w>k
@@ -42,6 +42,7 @@ map <C-o> :Vifm<CR>
 map <M-z>       <esc>:set wrap!<CR>
 
 " Save & compile SILE document
-map <C-b>       <esc>:w<CR>:!sile %<CR>
+imap <C-b>       <esc>:w<CR>:!sile %<CR>
+nmap <C-b>       :w<CR>:!sile %<CR>
 " Just enter a freakin' slash and start typing 'cause I'm a bonehead
 nmap \          i\
