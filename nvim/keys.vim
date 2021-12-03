@@ -32,8 +32,10 @@ nmap <C-w>      :wq!<CR>        " Save 'n quit
 imap <C-w>      <esc>:wq!<CR>
 nmap <C-q>      :q<CR>          " Quit
 imap <C-q>      <esc>:q<CR>
-map <C-z>       <esc>u          " Undo
-map <C-y>       <esc><C-r>      " Redo
+noremap <C-z>   u               " Undo
+inoremap <C-z>  <esc>u
+noremap <C-y>   <C-r>           " Redo
+inoremap <C-y>  <esc><C-r>
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
