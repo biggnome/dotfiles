@@ -1,5 +1,8 @@
 " General settings
 set cursorline                              " hilight cursor line
+set hidden                                  " keep buffers open without having to save
+set list                                    " show various hidden chars
+set listchars=tab:⯈\ ,trail:⋅
 set more                                    " ---more--- like less
 set mouse=a                                 " mouse navigation everywhere
 set nobackup                                " no auto backups
@@ -7,6 +10,7 @@ set number                                  " line numbers
 " set relativenumber                          " relative line number
 set scrolloff=3                             " lines above/below cursor
 set showcmd                                 " show cmds being typed
+set showmode
 set splitbelow splitright
 set t_Co=256                                " 256 color support
 set title                                   " window title
@@ -22,6 +26,9 @@ set autoindent                              " preserve indentation
 set backspace=indent,eol,start              " smart backspace
 set cinkeys-=0#                             " don't force # indentation
 set expandtab                               " no real tabs
+filetype on                                 " various filetype-awareness stuff
+filetype plugin on
+filetype indent on
 set ignorecase                              " by default ignore case
 set nrformats+=alpha                        " incr/decr letters C-a/-x
 set nowrap                                  " disable soft wrapping
@@ -58,10 +65,11 @@ augroup ScrollbarInit
   autocmd WinLeave,BufLeave,BufWinLeave,FocusLost            * silent! lua require('scrollbar').clear()
 
   let g:scrollbar_shape = { 'body': '▒' }
+  let g:scrollbar_right_offset = -1
+  let g:scrollbar_width = 1
 augroup end
 
 " Minimap settings
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
 let g:minimap_auto_start_win_enter = 1
-
