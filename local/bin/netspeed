@@ -9,5 +9,5 @@ TBPS=`expr $T2 - $T1`
 RBPS=`expr $R2 - $R1`
 TKBPS=`expr $TBPS / 1024`
 RKBPS=`expr $RBPS / 1024`
-echo "+@fg=3;$RKBPS kB+@fg=6;/+@fg=2;$TKBPS kB"
+echo "+@fg=2;$TKBPS kB+@fg=6;/+@fg=3;$RKBPS kB"
 
