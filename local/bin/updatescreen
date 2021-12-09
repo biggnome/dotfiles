@@ -1,0 +1,11 @@
+#!/bin/bash
+# updates wallpaper (I guess it could do other stuff as necessary) upon screen resize, 'cause VirtualBox
+
+SCR=$(cat ~/.screen~)
+
+if [ "$(xrandr | awk 'NR==2')" != "$SCR" ]
+then
+    nitrogen --restore
+fi
+
+xrandr | awk 'NR==2' > ~/.screen~
