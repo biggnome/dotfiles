@@ -1,0 +1,11 @@
+[Unit]
+Description=Write weather from wttr.in
+#Wants=writeweather.target
+#After=writeweather.target
+
+[Service]
+#Type=simple
+ExecStart=/home/sandy/.local/bin/writeweather.sh
+
+#[Install]
+#WantedBy=default.target
