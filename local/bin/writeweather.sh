@@ -1,7 +1,6 @@
 #!/bin/bash
 
-#SYM=$(echo curl -s "wttr.in?format=%C")$SYM
-TMP=$(curl -s "wttr.in/?format=%t")$TMP
+TMP=$(curl -s "wttr.in/?format=%t" | tr -d F)$TMP
 
 case $(curl -s "wttr.in?format=%C") in
     'Clear')                                SYM=" "    ;;
