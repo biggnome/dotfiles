@@ -36,6 +36,7 @@ noremap <C-z>   u               " Undo
 inoremap <C-z>  <esc>u
 noremap <C-y>   <C-r>           " Redo
 inoremap <C-y>  <esc><C-r>
+imap <C-S-z>    <esc><C-r>
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
