@@ -45,9 +45,10 @@ net() {
 # }
 
 ## Weather
+# Using a systemd timer to pull weather info from wttr.in to a cache file every 15min.
 weather() {
-    weather="$(curl -s wttr.in/Oakland?format=%t | tr -d '+')"
-    echo -e "  $weather"
+    weather="$(cat /home/sandy/.cache/weather)"
+    echo -e "$weather"
 }
 
 SLEEP_SEC=3
@@ -62,4 +63,3 @@ while :; do
     /home/sandy/.local/bin/updatescreen
     sleep $SLEEP_SEC
 done
-
