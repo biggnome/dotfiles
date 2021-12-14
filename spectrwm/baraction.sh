@@ -9,7 +9,7 @@ hdd() {
 
 ## RAM
 mem() {
-  mem=`free | awk '/Mem/ {printf "%dM/%dM\n", $3 / 1024.0, $2 /1024.0 }'`
+  mem=`free -h | awk '/Mem/ {printf $3 "/" $2 }'`
   echo -e " $mem"
 }
 
