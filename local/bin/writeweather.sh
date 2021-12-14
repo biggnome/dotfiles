@@ -2,7 +2,7 @@
 
 TMP=$(curl -s "wttr.in/?format=%t" | tr -d F)$TMP
 
-case $(curl -s "wttr.in?format=%C") in
+case $(curl -s "wttr.in?format=%C" | awk -F , '{print $1}') in
     'Clear')                                SYM=" "    ;;
     'Sunny')                                SYM=" "    ;;
     'Partly cloudy')                        SYM=" "    ;;
