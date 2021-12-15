@@ -51,6 +51,12 @@ weather() {
     echo -e "$weather"
 }
 
+## UPDATES
+updates() {
+    updates="$(cat /home/sandy/.cache/updates)"
+    echo -e " $updates"
+}
+
 SLEEP_SEC=3
 #loops forever outputting a line every SLEEP_SEC secs
 
@@ -59,7 +65,8 @@ SLEEP_SEC=3
 # So I would love to add more functions to this script but it makes the
 # echo output too long to display correctly.
 while :; do
-    echo "+@fg=3; $(hdd) +@fg=0; | +@fg=4; $(mem) +@fg=0; | +@fg=5; $(cpu) +@fg=0; | +@fg=6; $(net) +@fg=0; | +@fg=7; $(weather) +@fg=0; |" # +@fg=1; $(temp) +@fg=0; | +@fg=8; $(updates) +@fg=0; |"
+    echo "+@fg=2; $(updates) +@fg=0; | +@fg=3; $(hdd) +@fg=0; | +@fg=4; $(mem) +@fg=0; | +@fg=5; $(cpu) +@fg=0; | +@fg=6; $(net) +@fg=0; | +@fg=7; $(weather) +@fg=0; |" # +@fg=1; $(temp) +@fg=0; | +@fg=8; $(updates) +@fg=0; |"
     /home/sandy/.local/bin/updatescreen
     sleep $SLEEP_SEC
 done
+
