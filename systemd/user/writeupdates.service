@@ -1,0 +1,11 @@
+[Unit]
+Description=Write # of Debian updates
+#Wants=writeweather.target
+#After=writeweather.target
+
+[Service]
+#Type=simple
+ExecStart=/home/sandy/.local/bin/writeupdates.sh
+
+#[Install]
+#WantedBy=default.target
