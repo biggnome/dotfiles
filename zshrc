@@ -156,6 +156,7 @@ alias zsh-config='nvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
 alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
 alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
+alias kitty-config='nvim ~/.config/kitty/kitty.conf'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
