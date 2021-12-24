@@ -4,7 +4,10 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'arcticicestudio/nord-vim'
     Plug 'ayu-theme/ayu-vim'
     Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+    Plug 'godlygeek/tabular'
     Plug 'itchyny/lightline.vim'
+    Plug 'junegunn/limelight.vim'
+    Plug 'plasticboy/vim-markdown'
     Plug 'tpope/vim-surround'
     Plug 'vifm/vifm.vim'
     Plug 'wfxr/minimap.vim'
