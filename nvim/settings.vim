@@ -11,6 +11,7 @@ set number                                  " line numbers
 set scrolloff=3                             " lines above/below cursor
 set showcmd                                 " show cmds being typed
 set showmode
+" set spell spelllang=en_us                   " spellhceck!
 set splitbelow splitright
 set t_Co=256                                " 256 color support
 set title                                   " window title
@@ -88,3 +89,6 @@ let g:lightline = {
 function! LightlineReadonly()
   return &readonly && &filetype !=# 'help' ? 'RO' : ''
 endfunction
+
+" Markdown stuff
+set conceallevel=2
