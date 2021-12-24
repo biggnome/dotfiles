@@ -50,3 +50,6 @@ imap <C-b>       <esc>:w<CR>:!sile %<CR>
 nmap <C-b>       :w<CR>:!sile %<CR>
 " Just enter a freakin' slash and start typing 'cause I'm a bonehead
 nmap \          i\
+
+" Limelight
+nmap @          :Limelight!!0.5<CR>
