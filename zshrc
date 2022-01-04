@@ -197,3 +197,13 @@ ext ()
     echo "'$1' is not a valid file"
   fi
 }
+
+update-vcv ()
+{
+    sudo rm /usr/lib/vst/VCV*
+    sudo mv $1/*.so /usr/lib/vst
+    sudo rm -rf /opt/VCV/Rack2Pro
+    sudo mv $1/Rack2Pro /opt/VCV/
+    rm -rf $1
+    echo "VCV Rack update complete (unless you did something really dumb...you didn't, did you?)"
+}
