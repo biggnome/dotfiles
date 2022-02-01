@@ -160,6 +160,7 @@ alias kitty-config='nvim ~/.config/kitty/kitty.conf'
 alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
+alias weather='curl https://wttr.in/'
 # Wanton frivolity
 alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
 
