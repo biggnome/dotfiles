@@ -54,3 +54,6 @@ nmap \          i\
 
 " Limelight
 nmap @          :Limelight!!0.5<CR>
+
+" Toggle search highlight
+nnoremap <M-/> :set hlsearch!<CR>
