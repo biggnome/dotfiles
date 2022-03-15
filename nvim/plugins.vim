@@ -2,7 +2,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'altercation/vim-colors-solarized'
     Plug 'ap/vim-css-color'
     Plug 'arcticicestudio/nord-vim'
-    Plug 'ayu-theme/ayu-vim'
+    Plug 'Luxed/ayu-vim'
     Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
     Plug 'godlygeek/tabular'
     Plug 'itchyny/lightline.vim'
