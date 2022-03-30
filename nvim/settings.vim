@@ -11,7 +11,7 @@ set number                                  " line numbers
 set scrolloff=3                             " lines above/below cursor
 set showcmd                                 " show cmds being typed
 set showmode
-" set spell spelllang=en_us                   " spellhceck!
+set spell spelllang=en_us                   " spellhceck!
 set splitbelow splitright
 set t_Co=256                                " 256 color support
 set title                                   " window title
@@ -52,13 +52,6 @@ let g:netrw_browse_split = 4
 let g:netrw_winsize = 33
 
 " Scrollbar settings
-" For nvim 4
-"let g:scroll_bar_update_time=30
-"let g:scroll_bar_thumb_char = '█'
-"let g:scroll_bar_line_char = '│'
-"hi Scrollbar_Thumb guibg=NONE guifg=#3D4751 ctermbg=NONE ctermfg=8
-"hi Scrollbar_Line guibg=NONE guifg=#3D4751 ctermbg=NONE ctermfg=8
-" For nvim 5+
 augroup ScrollbarInit
   autocmd!
   autocmd CursorMoved,VimResized,QuitPre * silent! lua require('scrollbar').show()
