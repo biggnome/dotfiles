@@ -23,9 +23,10 @@ nnoremap <M-l>      :vertical resize +2<CR>
 map <M-s>       <C-w>s
 map <M-S-s>     <C-w>v
 
-nnoremap <M-PageUp> :bp<CR>
+" Previous/next/close buffer
+nnoremap <M-PageUp>     :bp<CR>
 nnoremap <M-PageDown>   :bn<CR>
-nnoremap <M-w>      :bd<CR>
+nnoremap <M-w>          :bd<CR>
 
 " Normal-person copy, cut, paste, save, quit, undo/redo
 nmap <M-v>      v<C-v>
@@ -44,6 +45,17 @@ inoremap <C-z>  <esc>u
 noremap <C-y>   <C-r>           " Redo
 inoremap <C-y>  <esc><C-r>
 map <C-S-z>     <esc><C-r>
+
+" Move line(s) up/down
+nmap <C-M-Up>   :m -2<CR>
+nmap <C-M-Down> :m +1<CR>
+nmap <C-M-k>    :m -2<CR>
+nmap <C-M-j>    :m +1<CR>
+
+vmap <C-M-Up>   :m '<-2<CR>
+vmap <C-M-Down> :m '>+1<CR>
+vmap <C-M-k>    :m '<-2<CR>
+vmap <C-M-j>    :m '>+1<CR>
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
