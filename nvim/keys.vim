@@ -1,10 +1,10 @@
 " Navigation
 map <Down>      gj
 map <Up>        gk
-"map <C-Left>    <C-w>h
+map <C-Left>    <C-w>h
 map <C-Down>    <C-w>j
 map <C-Up>      <C-w>k
-"map <C-Right>   <C-w>l
+map <C-Right>   <C-w>l
 map <C-h>       <C-w>h
 map <C-j>       <C-w>j
 map <C-k>       <C-w>k
@@ -12,18 +12,23 @@ map <C-l>       <C-w>l
 
 " Wrangle panes
 nnoremap <M-Left>   :vertical resize -2<CR>
-nnoremap <M-Down>   :resize -2<CR>
-nnoremap <M-Up>     :resize +2<CR>
+nnoremap <M-Down>   :resize +2<CR>
+nnoremap <M-Up>     :resize -2<CR>
 nnoremap <M-Right>  :vertical resize +2<CR>
 nnoremap <M-h>      :vertical resize -2<CR>
-nnoremap <M-j>      :resize -2<CR>
-nnoremap <M-k>      :resize +2<CR>
+nnoremap <M-j>      :resize +2<CR>
+nnoremap <M-k>      :resize -2<CR>
 nnoremap <M-l>      :vertical resize +2<CR>
 
 map <M-s>       <C-w>s
 map <M-S-s>     <C-w>v
 
+nnoremap <M-PageUp> :bp<CR>
+nnoremap <M-PageDown>   :bn<CR>
+nnoremap <M-w>      :bd<CR>
+
 " Normal-person copy, cut, paste, save, quit, undo/redo
+nmap <M-v>      v<C-v>
 vmap <C-c>      y               " Copy
 vmap <C-x>      x               " Cut
 nmap <C-v>      p               " Paste
