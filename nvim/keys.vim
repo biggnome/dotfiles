@@ -47,15 +47,15 @@ inoremap <C-y>  <esc><C-r>
 map <C-S-z>     <esc><C-r>
 
 " Move line(s) up/down
-nmap <C-M-Up>   :m -2<CR>
-nmap <C-M-Down> :m +1<CR>
-nmap <C-M-k>    :m -2<CR>
-nmap <C-M-j>    :m +1<CR>
+nmap <M-Up>   :m -2<CR>
+nmap <M-Down> :m +1<CR>
+nmap <M-k>    :m -2<CR>
+nmap <M-j>    :m +1<CR>
 
-vmap <C-M-Up>   :m '<-2<CR>
-vmap <C-M-Down> :m '>+1<CR>
-vmap <C-M-k>    :m '<-2<CR>
-vmap <C-M-j>    :m '>+1<CR>
+vmap <M-Up>   :m '<-2<CR>
+vmap <M-Down> :m '>+1<CR>
+vmap <M-k>    :m '<-2<CR>
+vmap <M-j>    :m '>+1<CR>
 
 " Open Vifm browser
 map <C-o> :Vifm<CR>
