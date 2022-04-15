@@ -11,14 +11,14 @@ map <C-k>       <C-w>k
 map <C-l>       <C-w>l
 
 " Wrangle panes
-nnoremap <M-Left>   :vertical resize -2<CR>
-nnoremap <M-Down>   :resize +2<CR>
-nnoremap <M-Up>     :resize -2<CR>
-nnoremap <M-Right>  :vertical resize +2<CR>
-nnoremap <M-h>      :vertical resize -2<CR>
-nnoremap <M-j>      :resize +2<CR>
-nnoremap <M-k>      :resize -2<CR>
-nnoremap <M-l>      :vertical resize +2<CR>
+nnoremap <M-S-Left>   :vertical resize -2<CR>
+nnoremap <M-S-Down>   :resize +2<CR>
+nnoremap <M-S-Up>     :resize -2<CR>
+nnoremap <M-S-Right>  :vertical resize +2<CR>
+nnoremap <M-S-h>      :vertical resize -2<CR>
+nnoremap <M-S-j>      :resize +2<CR>
+nnoremap <M-S-k>      :resize -2<CR>
+nnoremap <M-S-l>      :vertical resize +2<CR>
 
 map <M-s>       <C-w>s
 map <M-S-s>     <C-w>v
