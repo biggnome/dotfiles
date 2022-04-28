@@ -29,7 +29,8 @@ nnoremap <M-PageDown>   :bn<CR>
 nnoremap <M-w>          :bd<CR>
 
 " Normal-person copy, cut, paste, save, quit, undo/redo
-nmap <M-v>      v<C-v>
+nmap <M-v>      v<C-v>          " remap visual block mode
+vmap <M-v>      <C-v>
 vmap <C-c>      y               " Copy
 vmap <C-x>      x               " Cut
 nmap <C-v>      p               " Paste
