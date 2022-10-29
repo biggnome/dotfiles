@@ -2,7 +2,7 @@
 
 TMP=$(curl -s "wttr.in/?format=%t" | tr -d F)$TMP
 
-if [[ $TMP =~ ^[0-9] ]] then
+if [[ $TMP =~ ^.[0-9] ]] then
     case $(curl -s "wttr.in?format=%C" | awk -F , '{print $1}') in
         'Clear')                                SYM=" "    ;;
         'Sunny')                                SYM=" "    ;;

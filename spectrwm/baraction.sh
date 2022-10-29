@@ -61,7 +61,7 @@ SLEEP_SEC=3
 #loops forever outputting a line every SLEEP_SEC secs
 
 # It seems that we are limited to how many characters can be displayed via
-# the baraction script output. And the the markup tags count in that limit.
+# the baraction script output. And the markup tags count in that limit.
 # So I would love to add more functions to this script but it makes the
 # echo output too long to display correctly.
 while :; do
