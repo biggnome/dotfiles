@@ -149,6 +149,7 @@ alias rm='rm -rI'
 alias mv='mv -i'
 # Shorthand commands
 alias vim='nvim'
+alias mkdir='mkdir -p'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias ack='ag'
 alias zsh-reload='. ~/.zshrc'
@@ -163,6 +164,8 @@ alias powertop='sudo powertop'
 alias weather='curl https://wttr.in/'
 # Wanton frivolity
 alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
+export BATTALIONDATADIR='/usr/share/games/battalion.data'
+export BATTALIONSCOREDIR=$HOME/.local/share/games
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
