@@ -2,10 +2,7 @@
 
 TMP=$(curl -s "wttr.in/?format=%t" | tr -d F)$TMP
 
-if [[ "$TMP" =~ "Unknown location".* ]] then
-    SYM="轢 "
-    TMP="ERROR"
-else
+if [[ $TMP =~ ^[0-9] ]] then
     case $(curl -s "wttr.in?format=%C" | awk -F , '{print $1}') in
         'Clear')                                SYM=" "    ;;
         'Sunny')                                SYM=" "    ;;
@@ -56,6 +53,9 @@ else
         'Moderate or heavy snow with thunder')  SYM=" "    ;;
         *)                                      SYM=" "    ;;
     esac
+else
+    SYM="轢 "
+    TMP="ERROR"
 fi
 
 printf "$SYM$TMP" | tr -d '+'
