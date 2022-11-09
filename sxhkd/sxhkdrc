@@ -7,7 +7,7 @@ super + Return
 	kitty
 
 # program launcher
-super + @space
+super + space
 	rofi -modi drun -show drun -show-icons
     # dmenu_run
 super + n
@@ -93,7 +93,7 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {h,j,k,l}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
@@ -101,8 +101,8 @@ super + ctrl + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
-super + ctrl + space
-	bspc node -p cancel
+# super + ctrl + space
+# 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
 super + ctrl + shift + space
@@ -123,3 +123,13 @@ super + alt + shift + {Left,Down,Up,Right}
 # move a floating window
 super + {Left,Down,Up,Right}
 	bspc node -v {-20 0,0 20,0 -20,20 0}
+
+#
+# cycle bsp-layout
+#
+
+super + alt + space
+    bsp-layout next --layouts tiled,tall
+
+super + alt + shift + space
+    bsp-layout previous --layouts tiled,tall
