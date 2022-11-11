@@ -1,0 +1,36 @@
+## Syntax highlighting for SILE documents.
+
+syntax sile "\.sil$"
+comment "%"
+
+# Comment
+color lightblack "%.*$"
+
+# Escaped Character
+color peach "\\[\\%\{\}]"
+
+# Command
+color peach "\\\h[a-zA-Z0-9:-]\+"
+
+# Block
+color orange "\\begin" "\\end"
+color peach start="\{" end="\}"
+
+# Script
+color lightblue "\\script" "src="
+
+# Options
+color lightblue "\h[a-zA-Z0-9-]\+"
+
+# Option Def
+color lightblue "="
+
+# Option Value
+color purple "[^,]"]\+" "\[" "\]"
+
+# Option Separator
+color peach ","
+
+# Styles
+color italic,peach start="\\em\{" end="\}"
+color bold,peach start="\\strong\{" end="\}"
