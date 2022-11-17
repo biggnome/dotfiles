@@ -31,8 +31,8 @@ super + {_,shift + }w
 	bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
-super + m
-	bspc desktop -l next
+#super + m
+#	bspc desktop -l next
 
 # send the newest marked node to the newest preselected node
 super + y
@@ -47,12 +47,12 @@ super + g
 #
 
 # set the window state
-super + {t,shift + t,shift +f,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+super + {alt + t,shift + f,f}
+	bspc node -t {tiled,floating,fullscreen}
 
 # set the node flags
-super + ctrl + {m,x,y,z}
-	bspc node -g {marked,locked,sticky,private}
+# super + ctrl + {m,x,y,z}
+# 	bspc node -g {marked,locked,sticky,private}
 
 #
 # focus/swap
@@ -97,11 +97,11 @@ super + {_,shift + }{1-9,0}
 #
 
 # preselect the direction
-super + ctrl + {Left,Down,Up,Right}
+super + alt + {Left,Down,Up,Right}
 	bspc node -p {west,south,north,east}
 
 # preselect the ratio
-super + ctrl + {1-9}
+super + alt + shift + {1-9}
 	bspc node -o 0.{1-9}
 
 # cancel the preselection for the focused node
@@ -109,7 +109,7 @@ super + Escape
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + shift + space
+super + ctrl + shift + Escape
 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
@@ -117,11 +117,11 @@ super + ctrl + shift + space
 #
 
 # expand a window by moving one of its side outward
-super + alt + {Left,Down,Up,Right}
+super + ctrl + {Left,Down,Up,Right}
 	bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
 
 # contract a window by moving one of its side inward
-super + alt + shift + {Left,Down,Up,Right}
+super + ctrl + shift + {Left,Down,Up,Right}
 	bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
 
 # move a floating window
@@ -132,8 +132,8 @@ super + {Left,Down,Up,Right}
 # cycle bsp-layout
 #
 
-super + alt + space
-    bsp-layout next --layouts tiled,tall
+super + t
+    bsp-layout next --layouts tall,tiled,even,monocle
 
-super + alt + shift + space
-    bsp-layout previous --layouts tiled,tall
+super + shift + t
+    bsp-layout previous --layouts tall,tiled,even,monocle
