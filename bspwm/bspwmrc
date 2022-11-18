@@ -24,6 +24,11 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
+for n in I II III IV V VI VII VIII IX X;
+do
+    bsp-layout set tall $n
+done
+
 $HOME/.local/bin/writeupdates.sh
 picom &
 nitrogen --restore
