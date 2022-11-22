@@ -8,9 +8,9 @@ case $(bsp-layout get) in
     'grid')         BSP="Grid" ;;
     'rgrid')        BSP="dirG" ;;
     'even')         BSP="Even" ;;
-    'tiled')        BSP="BSPT" ;;
+#    'tiled')        BSP="BSPT" ;;
     'monocle')      BSP="Mono" ;;
-    *)              BSP="????" ;;
+    *)              BSP="BSPT" ;;
 esac
 
 printf "$BSP"
