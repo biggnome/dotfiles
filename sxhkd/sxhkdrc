@@ -24,7 +24,7 @@ super + n
 	nautilus -w
 # web browser
 super + b
-	flatpak run com.brave.Browser
+	brave-browser
 # reload sxhkd´s configuration files
 super + ctrl + Escape
 	pkill -USR1 -x sxhkd
