@@ -16,14 +16,16 @@ super + slash
 
 
 # program launcher
-super + Space
+super + space
 	rofi -modi drun -show drun -show-icons
     # dmenu_run
+# file browser
 super + n
-    nautilus -w
+	nautilus -w
+# web browser
 super + b
-    firefox
-# make sxhkd reload its configuration files:
+	flatpak run com.brave.Browser
+# reload sxhkd´s configuration files
 super + ctrl + Escape
 	pkill -USR1 -x sxhkd
 
