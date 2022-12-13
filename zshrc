@@ -112,6 +112,7 @@ export SUDO_EDITOR='nvim'
 export VISUAL='nvim'
 export EDITOR='nvim'
 export MICRO_TRUECOLOR=1    # Enable true color mode for micro editor
+export PAGER='bat'
 
 # Compilation flags
 export ARCHFLAGS="-arch x86_64"
@@ -152,6 +153,9 @@ alias vim='nvim'
 alias mkdir='mkdir -p'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias ack='ag'
+alias cat='bat'
+alias less='bat'
+alias more='bat'
 alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
