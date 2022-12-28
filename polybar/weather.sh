@@ -19,6 +19,7 @@ if [[ $TMP =~ ^.[0-9] ]] then
         'Blizzard')                             SYM=" "    ;;
         'Fog')                                  SYM=" "    ;;
         'Freezing fog')                         SYM=" "    ;;
+        'Shallow fog')                          SYM=" "    ;;
         'Patchy light drizzle')                 SYM=" "    ;;
         'Light drizzle')                        SYM=" "    ;;
         'Freezing drizzle')                     SYM=" "    ;;

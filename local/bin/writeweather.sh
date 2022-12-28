@@ -1,5 +1,6 @@
 #!/bin/bash
 
+#SYM=$(echo curl -s "wttr.in?format=%C")$SYM
 TMP=$(curl -s "wttr.in/?format=%t" | tr -d F)$TMP
 
 case $(curl -s "wttr.in?format=%C" | awk -F , '{print $1}') in
@@ -18,6 +19,7 @@ case $(curl -s "wttr.in?format=%C" | awk -F , '{print $1}') in
     'Blizzard')                             SYM=" "    ;;
     'Fog')                                  SYM=" "    ;;
     'Freezing fog')                         SYM=" "    ;;
+    'Shallow fog')                          SYM=" "    ;;
     'Patchy light drizzle')                 SYM=" "    ;;
     'Light drizzle')                        SYM=" "    ;;
     'Freezing drizzle')                     SYM=" "    ;;
