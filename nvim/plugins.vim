@@ -2,6 +2,8 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'Luxed/ayu-vim'
     Plug 'Xuyuanp/scrollbar.nvim'
     Plug 'ap/vim-css-color'
+    Plug 'baskerville/vim-sxhkdrc'
+    Plug 'flrnd/plastic.vim'
     Plug 'godlygeek/tabular'
     Plug 'itchyny/lightline.vim'
     Plug 'junegunn/limelight.vim'

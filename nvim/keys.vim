@@ -65,8 +65,8 @@ map <C-o> :Vifm<CR>
 map <M-z>       <esc>:set wrap! lbr<CR>
 
 " Save & compile SILE document
-imap <C-b>       <esc>:w<CR>:!sile %<CR>
-nmap <C-b>       :w<CR>:!sile %<CR>
+imap <C-b>       <esc>:w<CR>:!sile "%"<CR>
+nmap <C-b>       :w<CR>:!sile "%"<CR>
 " Just enter a freakin' slash and start typing 'cause I'm a bonehead
 nmap \          i\
 
