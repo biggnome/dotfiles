@@ -1,14 +1,22 @@
 " Navigation
-map <Down>      gj
-map <Up>        gk
-map <C-Left>    <C-w>h
-map <C-Down>    <C-w>j
-map <C-Up>      <C-w>k
-map <C-Right>   <C-w>l
-map <C-h>       <C-w>h
-map <C-j>       <C-w>j
-map <C-k>       <C-w>k
-map <C-l>       <C-w>l
+map <Down>          gj
+map <Up>            gk
+map <C-Left>        <C-w>h
+map <C-Down>        <C-w>j
+map <C-Up>          <C-w>k
+map <C-Right>       <C-w>l
+map <C-h>           <C-w>h
+map <C-j>           <C-w>j
+map <C-k>           <C-w>k
+map <C-l>           <C-w>l
+nnoremap <C-Left>   b
+nnoremap <C-Right>  e
+nnoremap <C-h>      b
+nnoremap <C-l>      e
+vnoremap <C-Left>   b
+vnoremap <C-Right>  e
+vnoremap <C-h>      b
+vnoremap <C-l>      e
 
 " Wrangle panes
 nnoremap <M-S-Left>   :vertical resize -2<CR>
@@ -32,9 +40,10 @@ nnoremap <M-w>          :bd<CR>
 nmap <M-v>      v<C-v>          " remap visual block mode
 vmap <M-v>      <C-v>
 vmap <C-c>      y               " Copy
+nnoremap <Y>    y$              " Copy to EOL
 vmap <C-x>      x               " Cut
-nmap <C-v>      p               " Paste
-imap <C-v>      <esc>p
+nmap <C-v>      P               " Paste
+imap <C-v>      <esc>Pi
 nmap <C-s>      :w<CR>          " Save
 imap <C-s>      <esc>:w<CR>
 "nmap <C-S-q>    :wq!<CR>        " Save 'n quit
@@ -58,6 +67,16 @@ vmap <M-Down> :m '>+1<CR>
 vmap <M-k>    :m '<-2<CR>
 vmap <M-j>    :m '>+1<CR>
 
+" Indent/de-indent
+nmap >>             <Nop>
+nmap <<             <Nop>
+vmap >>             <Nop>
+vmap <<             <Nop>
+nnoremap <Tab>      >>
+nnoremap <S-Tab>    <<
+vnoremap <Tab>      >><Esc>gv
+vnoremap <S-Tab>    <<<Esc>gv
+
 " Open Vifm browser
 map <C-o> :Vifm<CR>
 
@@ -75,3 +94,32 @@ nmap @          :Limelight!!0.5<CR>
 
 " Toggle search highlight
 nnoremap <M-/> :set hlsearch!<CR>
+
+" Paired bracket stuff
+inoremap <> <><Left>
+inoremap () ()<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap `` ``<Left>
+
+" Curly quotes (WIP)
+inoremap <M-'>  ’
+inoremap <M-[>  ‘
+inoremap <M-]>  ’
+inoremap <M-S-[>  “
+inoremap <M-S-]>  ”
+
+" Commenting blocks of code.
+augroup commenting_blocks_of_code
+  autocmd!
+  autocmd FileType c,cpp,java,scala let b:comment_leader = '// '
+  autocmd FileType sh,ruby,python   let b:comment_leader = '# '
+  autocmd FileType conf,fstab       let b:comment_leader = '# '
+  autocmd FileType tex,sile         let b:comment_leader = '% '
+  autocmd FileType mail             let b:comment_leader = '> '
+  autocmd FileType vim              let b:comment_leader = '" '
+augroup END
+noremap <C-/>   :<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'\/')<CR>/<CR>:nohlsearch<CR>
+noremap <C-S-/> :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>
