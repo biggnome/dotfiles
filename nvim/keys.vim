@@ -1,35 +1,36 @@
 " Navigation
 map <Down>          gj
 map <Up>            gk
-map <C-Left>        <C-w>h
-map <C-Down>        <C-w>j
-map <C-Up>          <C-w>k
-map <C-Right>       <C-w>l
-map <C-h>           <C-w>h
-map <C-j>           <C-w>j
-map <C-k>           <C-w>k
-map <C-l>           <C-w>l
-nnoremap <C-Left>   b
-nnoremap <C-Right>  e
-nnoremap <C-h>      b
-nnoremap <C-l>      e
-vnoremap <C-Left>   b
-vnoremap <C-Right>  e
-vnoremap <C-h>      b
-vnoremap <C-l>      e
+nnoremap <M-Left>   b
+nnoremap <M-Right>  e
+nnoremap <M-h>      b
+nnoremap <M-l>      e
+vnoremap <M-Left>   b
+vnoremap <M-Right>  e
+vnoremap <M-h>      b
+vnoremap <M-l>      e
 
 " Wrangle panes
-nnoremap <M-S-Left>   :vertical resize -2<CR>
-nnoremap <M-S-Down>   :resize +2<CR>
-nnoremap <M-S-Up>     :resize -2<CR>
-nnoremap <M-S-Right>  :vertical resize +2<CR>
-nnoremap <M-S-h>      :vertical resize -2<CR>
-nnoremap <M-S-j>      :resize +2<CR>
-nnoremap <M-S-k>      :resize -2<CR>
-nnoremap <M-S-l>      :vertical resize +2<CR>
+nnoremap <C-M-Left>     :vertical resize -2<CR>
+nnoremap <C-M-Down>     :resize +2<CR>
+nnoremap <C-M-Up>       :resize -2<CR>
+nnoremap <C-M-Right>    :vertical resize +2<CR>
+nnoremap <C-M-h>        :vertical resize -2<CR>
+nnoremap <C-M-j>        :resize +2<CR>
+nnoremap <C-M-k>        :resize -2<CR>
+nnoremap <C-M-l>        :vertical resize +2<CR>
 
-map <M-s>       <C-w>s
-map <M-S-s>     <C-w>v
+nmap <C-Left>     <C-w>h
+nmap <C-Down>     <C-w>j
+nmap <C-Up>       <C-w>k
+nmap <C-Right>    <C-w>l
+nmap <C-h>        <C-w>h
+nmap <C-j>        <C-w>j
+nmap <C-k>        <C-w>k
+nmap <C-l>        <C-w>l
+
+map <M-s>               <C-w>s
+map <M-S-s>             <C-w>v
 
 " Previous/next/close buffer
 nnoremap <M-PageUp>     :bp<CR>
@@ -37,17 +38,18 @@ nnoremap <M-PageDown>   :bn<CR>
 nnoremap <M-w>          :bd<CR>
 
 " Normal-person copy, cut, paste, save, quit, undo/redo
-nmap <M-v>      v<C-v>          " remap visual block mode
-vmap <M-v>      <C-v>
-vmap <C-c>      y               " Copy
+nnoremap <M-v>  v<C-v>          " remap visual block mode
+vnoremap <M-v>  <C-v>
+vnoremap <C-c>  y               " Copy
 nnoremap <Y>    y$              " Copy to EOL
 vmap <C-x>      x               " Cut
 nmap <C-v>      P               " Paste
 imap <C-v>      <esc>Pi
+vmap <C-v>      p
 nmap <C-s>      :w<CR>          " Save
 imap <C-s>      <esc>:w<CR>
-"nmap <C-S-q>    :wq!<CR>        " Save 'n quit
-"imap <C-S-q>    <esc>:wq!<CR>
+nmap <C-M-q>    :q!<CR>         " Exit w/o save
+imap <C-M-q>    <esc>:q!<CR>
 nmap <C-q>      :q<CR>          " Quit
 imap <C-q>      <esc>:q<CR>
 noremap <C-z>   u               " Undo
@@ -105,11 +107,11 @@ inoremap '' ''<Left>
 inoremap `` ``<Left>
 
 " Curly quotes (WIP)
-inoremap <M-'>  ’
-inoremap <M-[>  ‘
-inoremap <M-]>  ’
-inoremap <M-S-[>  “
-inoremap <M-S-]>  ”
+inoremap <M-'>      ’
+inoremap <M-[>      ‘
+inoremap <M-]>      ’
+inoremap <M-S-[>    “
+inoremap <M-S-]>    ”
 
 " Commenting blocks of code.
 augroup commenting_blocks_of_code
