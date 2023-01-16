@@ -1,14 +1,14 @@
 " Navigation
 map <Down>          gj
 map <Up>            gk
-nnoremap <M-Left>   b
-nnoremap <M-Right>  e
-nnoremap <M-h>      b
-nnoremap <M-l>      e
-vnoremap <M-Left>   b
-vnoremap <M-Right>  e
-vnoremap <M-h>      b
-vnoremap <M-l>      e
+
+nnoremap <C-Right>  e
+nnoremap <C-h>      b
+nnoremap <C-l>      e
+vnoremap <C-Left>   b
+vnoremap <C-Right>  e
+vnoremap <C-h>      b
+vnoremap <C-l>      e
 
 " Wrangle panes
 nnoremap <C-M-Left>     :vertical resize -2<CR>
@@ -20,14 +20,14 @@ nnoremap <C-M-j>        :resize +2<CR>
 nnoremap <C-M-k>        :resize -2<CR>
 nnoremap <C-M-l>        :vertical resize +2<CR>
 
-nmap <C-Left>     <C-w>h
-nmap <C-Down>     <C-w>j
-nmap <C-Up>       <C-w>k
-nmap <C-Right>    <C-w>l
-nmap <C-h>        <C-w>h
-nmap <C-j>        <C-w>j
-nmap <C-k>        <C-w>k
-nmap <C-l>        <C-w>l
+nmap <M-Left>     <C-w>h
+nmap <M-Down>     <C-w>j
+nmap <M-Up>       <C-w>k
+nmap <M-Right>    <C-w>l
+nmap <M-h>        <C-w>h
+nmap <M-j>        <C-w>j
+nmap <M-k>        <C-w>k
+nmap <M-l>        <C-w>l
 
 map <M-s>               <C-w>s
 map <M-S-s>             <C-w>v
@@ -59,15 +59,15 @@ inoremap <C-y>  <esc><C-r>
 map <C-S-z>     <esc><C-r>
 
 " Move line(s) up/down
-nmap <M-Up>   :m -2<CR>
-nmap <M-Down> :m +1<CR>
-nmap <M-k>    :m -2<CR>
-nmap <M-j>    :m +1<CR>
+nmap <M-S-Up>   :m -2<CR>
+nmap <M-S-Down> :m +1<CR>
+nmap <M-S-k>    :m -2<CR>
+nmap <M-S-j>    :m +1<CR>
 
-vmap <M-Up>   :m '<-2<CR>
-vmap <M-Down> :m '>+1<CR>
-vmap <M-k>    :m '<-2<CR>
-vmap <M-j>    :m '>+1<CR>
+vmap <M-S-Up>   :m '<-2<CR>
+vmap <M-S-Down> :m '>+1<CR>
+vmap <M-S-k>    :m '<-2<CR>
+vmap <M-S-j>    :m '>+1<CR>
 
 " Indent/de-indent
 nmap >>             <Nop>
