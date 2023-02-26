@@ -166,6 +166,7 @@ alias conky-config='nvim ~/.config/conky/conky.conf'
 alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
 alias weather='curl https://wttr.in/'
+alias makedep='sudo pacman -D --asdeps'
 # Wanton frivolity
 alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
 export BATTALIONDATADIR='/usr/share/games/battalion.data'
