@@ -9,6 +9,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'junegunn/limelight.vim'
     Plug 'plasticboy/vim-markdown'
     Plug 'sile-typesetter/vim-sile'
+    Plug 'tomasiser/vim-code-dark'
     Plug 'tpope/vim-surround'
     Plug 'vifm/vifm.vim'
 "    Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
