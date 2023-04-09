@@ -21,7 +21,9 @@ nnoremap <C-M-k>        :resize -2<CR>
 nnoremap <C-M-l>        :vertical resize +2<CR>
 
 nmap <M-Left>     <C-w>h
+nmap <C-Down>     <C-w>j
 nmap <M-Down>     <C-w>j
+nmap <C-Up>       <C-w>k
 nmap <M-Up>       <C-w>k
 nmap <M-Right>    <C-w>l
 nmap <M-h>        <C-w>h

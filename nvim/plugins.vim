@@ -12,6 +12,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tomasiser/vim-code-dark'
     Plug 'tpope/vim-surround'
     Plug 'vifm/vifm.vim'
+    Plug 'Yggdroot/indentLine'
 "    Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 "    Plug 'arcticicestudio/nord-vim'
 "    Plug 'altercation/vim-colors-solarized'

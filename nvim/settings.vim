@@ -2,7 +2,7 @@
 set cursorline                              " hilight cursor line
 set hidden                                  " keep buffers open without having to save
 set list                                    " show various hidden chars
-set listchars=tab:⯈\ ,trail:⋅
+set listchars=tab:⯈\ ,trail:⋅,nbsp:+,
 set more                                    " ---more--- like less
 set mouse=a                                 " mouse navigation everywhere
 set nobackup                                " no auto backups
@@ -17,7 +17,7 @@ set t_Co=256                                " 256 color support
 set title                                   " window title
 set wildignore=*.a,*.o,*.so,*.pyc,*.jpg,
     \*.jpeg,*.png,*.gif,*.pdf,*.git,
-    \*.swp,*.swo                            " tab completion ignores
+    \*.swp,*.swo,*.toc                      " tab completion ignores
 set wildmenu                                " better auto complete
 set wildmode=longest,list,full              " bash-like auto complete
 syntax on
@@ -70,14 +70,15 @@ let g:minimap_auto_start_win_enter = 1
 
 " Lightline settings
 let g:lightline = {
-      \ 'component_function': {
-      \   'readonly': 'LightlineReadonly',
-      \ },
-      \ 'active': {
-      \   'right': [ [ 'lineinfo' ],
-      \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
-      \ },
-      \ }
+    \ 'colorscheme': 'one',
+    \ 'component_function': {
+    \   'readonly': 'LightlineReadonly',
+    \ },
+    \ 'active': {
+    \   'right': [ [ 'lineinfo' ],
+    \              [ 'fileformat', 'fileencoding', 'filetype' ] ]
+    \ },
+    \ }
 
 function! LightlineReadonly()
   return &readonly && &filetype !=# 'help' ? 'RO' : ''
@@ -85,3 +86,6 @@ endfunction
 
 " Markdown stuff
 set conceallevel=2
+
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
