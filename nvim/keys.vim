@@ -1,3 +1,5 @@
+let mapleader = " "     " map leader to Space
+
 " Navigation
 map <Down>          gj
 map <Up>            gk
@@ -20,19 +22,17 @@ nnoremap <C-M-j>        :resize +2<CR>
 nnoremap <C-M-k>        :resize -2<CR>
 nnoremap <C-M-l>        :vertical resize +2<CR>
 
-nmap <M-Left>     <C-w>h
-nmap <C-Down>     <C-w>j
-nmap <M-Down>     <C-w>j
-nmap <C-Up>       <C-w>k
-nmap <M-Up>       <C-w>k
-nmap <M-Right>    <C-w>l
-nmap <M-h>        <C-w>h
-nmap <M-j>        <C-w>j
-nmap <M-k>        <C-w>k
-nmap <M-l>        <C-w>l
+nmap <leader><Left>     <C-w>h
+nmap <leader><Down>     <C-w>j
+nmap <leader><Up>       <C-w>k
+nmap <leader><Right>    <C-w>l
+nmap <leader>h          <C-w>h
+nmap <leader>j          <C-w>j
+nmap <leader>k          <C-w>k
+nmap <leader>l          <C-w>l
 
-map <M-s>               <C-w>s
-map <M-S-s>             <C-w>v
+map <leader>s           <C-w>s
+map <leader>v           <C-w>v
 
 " Previous/next/close buffer
 nnoremap <M-PageUp>     :bp<CR>
@@ -61,15 +61,15 @@ inoremap <C-y>  <esc><C-r>
 map <C-S-z>     <esc><C-r>
 
 " Move line(s) up/down
-nmap <M-S-Up>   :m -2<CR>
-nmap <M-S-Down> :m +1<CR>
-nmap <M-S-k>    :m -2<CR>
-nmap <M-S-j>    :m +1<CR>
+nmap <M-Up>   :m -2<CR>
+nmap <M-Down> :m +1<CR>
+nmap <M-k>    :m -2<CR>
+nmap <M-j>    :m +1<CR>
 
-vmap <M-S-Up>   :m '<-2<CR>
-vmap <M-S-Down> :m '>+1<CR>
-vmap <M-S-k>    :m '<-2<CR>
-vmap <M-S-j>    :m '>+1<CR>
+vmap <M-Up>   :m '<-2<CR>
+vmap <M-Down> :m '>+1<CR>
+vmap <M-k>    :m '<-2<CR>
+vmap <M-j>    :m '>+1<CR>
 
 " Indent/de-indent
 nmap >>             <Nop>
