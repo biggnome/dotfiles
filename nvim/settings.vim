@@ -63,6 +63,9 @@ augroup ScrollbarInit
   let g:scrollbar_width = 1
 augroup end
 
+" Forced syntax coloring
+au BufReadPost *.ny set syntax=lisp
+
 " Minimap settings
 let g:minimap_width = 10
 let g:minimap_auto_start = 1
