@@ -37,7 +37,7 @@ map <leader>v           <C-w>v
 " Previous/next/close buffer
 nnoremap <M-PageUp>     :bp<CR>
 nnoremap <M-PageDown>   :bn<CR>
-nnoremap <M-w>          :bd<CR>
+nnoremap <M-w>          :bp<CR>:bw #<CR>
 
 " Normal-person copy, cut, paste, save, quit, undo/redo
 nnoremap <M-v>  v<C-v>          " remap visual block mode
