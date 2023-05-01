@@ -147,6 +147,7 @@ function cd {
 export BATTALIONDATADIR=/usr/share/games/battalion.data
 export BATTALIONSCOREDIR=$HOME/.local/share/games
 export PATH=$HOME/.cargo/bin:$PATH
+export RACK_PATH=$HOME/Rack
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
