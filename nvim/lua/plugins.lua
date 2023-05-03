@@ -24,47 +24,47 @@ return require('packer').startup(function(use)
             run = function()
                 pcall(vim.cmd, 'MasonUpdate')
             end,
-        },
-        {'williamboman/mason-lspconfig.nvim'}, -- Optional
+            },
+            {'williamboman/mason-lspconfig.nvim'}, -- Optional
 
-        -- Autocompletion
-        {'hrsh7th/nvim-cmp'},     -- Required
-        {'hrsh7th/cmp-nvim-lsp'}, -- Required
-        {'L3MON4D3/LuaSnip'},     -- Required
+            -- Autocompletion
+            {'hrsh7th/nvim-cmp'},     -- Required
+            {'hrsh7th/cmp-nvim-lsp'}, -- Required
+            {'L3MON4D3/LuaSnip'},     -- Required
+        }
     }
-}
--- Lualine
-use {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-}
--- OneDark theme
-use 'navarasu/onedark.nvim'
--- Scrollbar
-use("petertriho/nvim-scrollbar")
-use {
-    "kevinhwang91/nvim-hlslens",
-    config = function()
-        -- require('hlslens').setup() is not required
-        require("scrollbar.handlers.search").setup({
-            -- hlslens config overrides
-            override_lens = function() end,
-        })
-    end,
-}
--- Sile syntax highlighting
-use 'sile-typesetter/vim-sile'
--- sxhkdrc syntax highlighting
-use 'baskerville/vim-sxhkdrc'
---Treesitter
-use {
-    'nvim-treesitter/nvim-treesitter',
-    run = function()
-        local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-        ts_update()
-    end,
-}
--- Vifm
-use 'vifm/vifm.vim'
+    -- Lualine
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+    -- OneDark theme
+    use 'navarasu/onedark.nvim'
+    -- Scrollbar
+    use("petertriho/nvim-scrollbar")
+    use {
+        "kevinhwang91/nvim-hlslens",
+        config = function()
+            -- require('hlslens').setup() is not required
+            require("scrollbar.handlers.search").setup({
+                -- hlslens config overrides
+                override_lens = function() end,
+            })
+        end,
+    }
+    -- Sile syntax highlighting
+    use 'sile-typesetter/vim-sile'
+    -- sxhkdrc syntax highlighting
+    use 'baskerville/vim-sxhkdrc'
+    --Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+            ts_update()
+        end,
+    }
+    -- Vifm
+    use 'vifm/vifm.vim'
 
 end)
