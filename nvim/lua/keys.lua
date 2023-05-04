@@ -117,6 +117,10 @@ vim.keymap.set("i", "<M-S-[>", "“")
 vim.keymap.set("i", "<M-S-]>", "”")
 
 
+-- Wrangle LSPs
+vim.keymap.set("n", "<leader>li", ":LspInstall<CR>")
+
+
 -- Commenting blocks of code.
 local augroup = vim.api.nvim_create_augroup('commenting_blocks_of_code', {clear = true})
 vim.api.nvim_create_autocmd('FileType', {
@@ -154,7 +158,7 @@ vim.api.nvim_create_autocmd('FileType', {
   group = augroup,
   command = "let b:comment_leader = '\"'"
 })
-vim.keymap.set("n", "<C-/>",    ":<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'/')<CR>/<CR>:nohlsearch<CR>")
+vim.keymap.set({"n", "v"}, "<C-/>",    ":<C-B>silent <C-E>s/^/<C-R>=escape(b:comment_leader,'/')<CR>/<CR>:nohlsearch<CR>")
 vim.cmd [[noremap <C-S-/> :<C-B>silent <C-E>s/^\V<C-R>=escape(b:comment_leader,'\/')<CR>//e<CR>:nohlsearch<CR>]]
 
 

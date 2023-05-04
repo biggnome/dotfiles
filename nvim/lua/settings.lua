@@ -76,14 +76,14 @@ vim.g["netrw_winsize"] = 33
 augroup AutoBlockComment
     autocmd! FileType c,cpp setlocal comments -=:// comments +=f://
 augroup END
-
-
-" Forced syntax coloring
-au BufReadPost *.ny vim.opt.syntax=lisp
-
-
-
 --]]
+
+
+-- Forced syntax coloring
+vim.cmd[[au BufReadPost *.ny vim.opt.syntax=lisp]]
+
+
+
 
 -- Markdown stuff
 vim.opt.conceallevel = 2
