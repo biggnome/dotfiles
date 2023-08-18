@@ -21,7 +21,7 @@ super + space
     # dmenu_run
 # file browser
 super + n
-	nautilus -w
+	nemo
 # web browser
 super + b
 	brave-browser
