@@ -154,7 +154,7 @@ alias cp='cp -i'
 alias rm='rm -rI'
 alias mv='mv -i'
 # Shorthand commands
-alias vim='nvim'
+# alias vim='nvim'
 alias mkdir='mkdir -p'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias ack='ag'
@@ -165,21 +165,20 @@ alias zsh-reload='. ~/.zshrc'
 alias zsh-config='nvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
 alias osxclean="find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
-alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
+# alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
 alias kitty-config='nvim ~/.config/kitty/kitty.conf'
-alias conky-config='nvim ~/.config/conky/conky.conf'
-alias conky-reload='killall conky && ~/.config/conky/./autostart'
+# alias conky-config='nvim ~/.config/conky/conky.conf'
+# alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
 alias weather='curl https://wttr.in/'
 alias makedep='sudo pacman -D --asdeps'
 # Wanton frivolity
 alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
-export BATTALIONDATADIR='/usr/share/games/battalion.data'
-export BATTALIONSCOREDIR=$HOME/.local/share/games
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# User functions
 # Basic auto/tab complete:
 autoload -U compinit
 zstyle ':completion:*' menu select
@@ -187,6 +186,7 @@ zmodload zsh/complist
 compinit
 _comp_options+=(globdots)		# Include hidden files.
 
+# “...One function to extract them all, and in the darkness bind them”
 ext ()
 {
   if [ -f $1 ] ; then
@@ -221,3 +221,8 @@ update-vcv ()
     rm -rf $1
     echo "VCV Rack update complete (unless you did something really dumb...you didn't, did you?)"
 }
+
+# Path stuff
+export BATTALIONDATADIR='/usr/share/games/battalion.data'
+export BATTALIONSCOREDIR=$HOME/.local/share/games
+
