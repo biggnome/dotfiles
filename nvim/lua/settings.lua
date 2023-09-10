@@ -1,4 +1,5 @@
 -- General settings
+vim.opt.clipboard:append { 'unnamed', 'unnamedplus' }             -- use system clipboard
 vim.opt.cursorline = true                       -- hilight cursor line
 vim.opt.hidden = true                           -- keep buffers open without having to save
 vim.opt.list = true                             -- show various hidden chars
@@ -67,23 +68,23 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 })
 
 
---[[
 -- netrw odds 'n ends
-vim.g["netrw_browse_split"] = 4
+vim.g["netrw_browse_split"] = 2
 vim.g["netrw_winsize"] = 33
 
+--[[
 -- Only auto-comment newline for block comments
 augroup AutoBlockComment
     autocmd! FileType c,cpp setlocal comments -=:// comments +=f://
 augroup END
+
+
+" Forced syntax coloring
+au BufReadPost *.ny vim.opt.syntax=lisp
+
+
+
 --]]
-
-
--- Forced syntax coloring
-vim.cmd[[au BufReadPost *.ny vim.opt.syntax=lisp]]
-
-
-
 
 -- Markdown stuff
 vim.opt.conceallevel = 2
