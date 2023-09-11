@@ -113,9 +113,9 @@ plugins=(
 # else
 #   export EDITOR='mvim'
 # fi
-export SUDO_EDITOR='nvim'
-export VISUAL='nvim'
-export EDITOR='nvim'
+export SUDO_EDITOR='lvim'
+export VISUAL='lvim'
+export EDITOR='lvim'
 export MICRO_TRUECOLOR=1    # Enable true color mode for micro editor
 export PAGER='bat'
 
@@ -154,7 +154,7 @@ alias cp='cp -i'
 alias rm='rm -rI'
 alias mv='mv -i'
 # Shorthand commands
-# alias vim='nvim'
+# alias vim='lvim'
 alias mkdir='mkdir -p'
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
 alias ack='ag'
@@ -162,12 +162,12 @@ alias cat='bat'
 alias less='bat'
 alias more='bat'
 alias zsh-reload='. ~/.zshrc'
-alias zsh-config='nvim ~/.zshrc && zsh-reload'
+alias zsh-config='lvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
 alias osxclean="/bin/find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
-# alias alac-config='nvim ~/.config/alacritty/alacritty.yml'
-alias kitty-config='nvim ~/.config/kitty/kitty.conf'
-# alias conky-config='nvim ~/.config/conky/conky.conf'
+# alias alac-config='lvim ~/.config/alacritty/alacritty.yml'
+alias kitty-config='lvim ~/.config/kitty/kitty.conf'
+# alias conky-config='lvim ~/.config/conky/conky.conf'
 # alias conky-reload='killall conky && ~/.config/conky/./autostart'
 alias powertop='sudo powertop'
 alias weather='curl https://wttr.in/'

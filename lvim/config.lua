@@ -3,8 +3,9 @@
 -- Forum: https://www.reddit.com/r/lunarvim/
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
-
 lvim.plugins = {
+  -- OneDark theme
+  { "navarasu/onedark.nvim" },
   -- Scrollbar
     { "petertriho/nvim-scrollbar" },
     { "kevinhwang91/nvim-hlslens",
@@ -23,6 +24,8 @@ lvim.plugins = {
 }
 
 -- Settings/plugin stuff
+require('onedark').load()
+lvim.colorscheme = "onedark"
 require("scrollbar").setup()
 
 -- Keybindings
@@ -33,9 +36,6 @@ lvim.keys.insert_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
 
 -- Copy to EOL
 lvim.keys.normal_mode["<Shift-y>"] = "y$"
-
--- Toggle search highlight
-lvim.keys.normal_mode["<M-/>"] = ":set hlsearch!<CR>"
 
 -- Move line(s) up/down
 -- lvim.keys.visual_mode["M-Down"] = "<M-j>"
