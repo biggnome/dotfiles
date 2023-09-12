@@ -139,12 +139,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Pretty!
-alias ls='colorls'
+alias ls='lsd'  # formerly colorls
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
 alias fgrep='fgrep --color=auto'
 function chpwd() {  # ls that sucker whenever working directory changes
-    colorls
+    lsd
 }
 # Human-readable sizes
 alias df='df -h'
@@ -154,9 +154,12 @@ alias cp='cp -i'
 alias rm='rm -rI'
 alias mv='mv -i'
 # Shorthand commands
-# alias vim='lvim'
+alias vi='lvim'   # alias n/vi/m to lvim...
+alias vim='lvim'  # ...
+alias nvim='lvim' # .
 alias mkdir='mkdir -p'
-alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd', excluding backups
+alias fd='fd -H -E /timeshift/ -E /run/timeshift/'      # Exclude backups from fd
+alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd'
 alias ack='ag'
 alias cat='bat'
 alias less='bat'

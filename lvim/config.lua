@@ -4,29 +4,42 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 lvim.plugins = {
-  -- OneDark theme
-  { "navarasu/onedark.nvim" },
-  -- Scrollbar
+    -- OneDark theme
+    { "navarasu/onedark.nvim" },
+    -- Scrollbar
     { "petertriho/nvim-scrollbar" },
     { "kevinhwang91/nvim-hlslens",
-      config = function()
+        config = function()
         -- require('hlslens').setup() is not required
         require("scrollbar.handlers.search").setup({
           -- hlslens config overrides
           override_lens = function() end,
         })
-      end,
+        end,
     },
-  -- Sile syntax highlighting
-  { "sile-typesetter/vim-sile" },
+    -- Sile syntax highlighting
+    { "sile-typesetter/vim-sile" },
     -- sxhkdrc syntax highlighting
-  { "baskerville/vim-sxhkdrc" },
+    { "baskerville/vim-sxhkdrc" },
+    -- Tokyo Night theme
+    { "folke/tokyonight.nvim" },
 }
 
 -- Settings/plugin stuff
-require('onedark').load()
-lvim.colorscheme = "onedark"
+local components = require("lvim.core.lualine.components")
+lvim.builtin.lualine.sections.lualine_a = { components.mode }
+lvim.builtin.lualine.sections.lualine_b = {
+    { 'mode', fmt = function(str) return str:sub(1,3) end }
+}
+lvim.builtin.lualine.sections.lualine_x = { "encoding", "filetype" }
+-- require('onedark').load()
+lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
+vim.opt.shiftwidth = 4
+vim.opt.softtabstop = 4
+vim.opt.tabstop = 4
+vim.opt.spell = true                            -- spellhceck!
+vim.opt.spelllang = "en_us"
 
 -- Keybindings
 -- Toggle word wrap
