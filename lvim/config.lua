@@ -4,6 +4,8 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 
 lvim.plugins = {
+    -- Hex color previews
+    { "NvChad/nvim-colorizer.lua" },
     -- OneDark theme
     { "navarasu/onedark.nvim" },
     -- Scrollbar
@@ -33,6 +35,15 @@ lvim.builtin.lualine.sections.lualine_b = {
 }
 lvim.builtin.lualine.sections.lualine_x = { "encoding", "filetype" }
 -- require('onedark').load()
+require("colorizer").setup {
+    user_default_options = {
+        names = false,
+        RRGGBBAA = true,
+        css = true,
+        css_fn = true,
+        -- mode = "virtualtext",
+    }
+}
 lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
 vim.opt.shiftwidth = 4
