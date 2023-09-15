@@ -6,8 +6,10 @@
 lvim.plugins = {
     -- Hex color previews
     { "NvChad/nvim-colorizer.lua" },
+
     -- OneDark theme
-    { "navarasu/onedark.nvim" },
+    -- { "navarasu/onedark.nvim" },
+    
     -- Scrollbar
     { "petertriho/nvim-scrollbar" },
     { "kevinhwang91/nvim-hlslens",
@@ -19,15 +21,22 @@ lvim.plugins = {
         })
         end,
     },
+    
     -- Sile syntax highlighting
     { "sile-typesetter/vim-sile" },
+    
     -- sxhkdrc syntax highlighting
     { "baskerville/vim-sxhkdrc" },
+    
     -- Tokyo Night theme
     { "folke/tokyonight.nvim" },
 }
 
--- Settings/plugin stuff
+
+-- ***************************
+-- ** Settings/plugin stuff **
+-- ***************************
+
 local components = require("lvim.core.lualine.components")
 lvim.builtin.lualine.sections.lualine_a = { components.mode }
 lvim.builtin.lualine.sections.lualine_b = {
@@ -46,13 +55,32 @@ require("colorizer").setup {
 }
 lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
+
+-- Show various hidden chars
+vim.opt.list = true
+vim.opt.listchars = {
+        tab = "⯈ ",
+        trail = "⋅",
+        nbsp = "+"
+}
+
+-- Tabs/spacing
 vim.opt.shiftwidth = 4
 vim.opt.softtabstop = 4
 vim.opt.tabstop = 4
-vim.opt.spell = true                            -- spellhceck!
+
+-- Spellhceck!
+vim.opt.spell = true
 vim.opt.spelllang = "en_us"
 
--- Keybindings
+-- Markdown stuff
+vim.opt.conceallevel = 2
+
+
+-- *****************
+-- ** Keybindings **
+-- *****************
+
 -- Toggle word wrap
 lvim.keys.normal_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
 lvim.keys.visual_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
