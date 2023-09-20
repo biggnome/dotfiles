@@ -93,7 +93,7 @@ plugins=(
     # alias-finder
     # calc                    # in-shell calculator (via "=" command) from arzzen/calc.plugin.zsh
     git
-    colored-man-pages-alt   # prettier version from ael-code/zsh-colored-man-pages
+    colored-man-pages
     # sudo
     # z
     zsh-autosuggestions
@@ -164,7 +164,8 @@ alias ack='ag'
 alias cat='bat'
 alias less='bat'
 alias more='bat'
-alias zsh-reload='. ~/.zshrc'
+alias readme='glow README.md'
+alias zsh-reload='exec zsh'
 alias zsh-config='lvim ~/.zshrc && zsh-reload'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
 alias osxclean="/bin/find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
