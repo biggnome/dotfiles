@@ -90,14 +90,18 @@ setopt HIST_REDUCE_BLANKS
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    # alias-finder
+    ag
+    aliases
     # calc                    # in-shell calculator (via "=" command) from arzzen/calc.plugin.zsh
-    git
     colored-man-pages
+    fancy-ctrl-z
+    fast-syntax-highlighting
+    fd
+    git
+    git-auto-fetch
     # sudo
     # z
     zsh-autosuggestions
-    fast-syntax-highlighting
 )
 
 # User configuration
