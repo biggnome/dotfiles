@@ -55,6 +55,7 @@ require("colorizer").setup {
 }
 lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
+-- lvim.transparent_window = true
 
 -- Show various hidden chars
 vim.opt.list = true
