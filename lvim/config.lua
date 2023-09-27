@@ -57,6 +57,10 @@ lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
 -- lvim.transparent_window = true
 
+-- SILE comments
+local ft = require('Comment.ft')
+ft.sile = '%%s'
+
 -- Show various hidden chars
 vim.opt.list = true
 vim.opt.listchars = {
