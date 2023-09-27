@@ -140,7 +140,7 @@ numlockx on
 
 # cd & ls...together as one
 function cd {
-    builtin cd "$@" && ls -F
+    builtin cd "$@" && lsd -F
 }
 
 # fun with PATHs!
