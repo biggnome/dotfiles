@@ -106,7 +106,7 @@
     vim_shell               # vim shell indicator (:sh)
     virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     # vpn_ip                # virtual private network indicator
-    wifi                    # wifi speed
+    # wifi                    # wifi speed
     # xplr                    # xplr shell (https://github.com/sayanarijit/xplr)
   )
 
