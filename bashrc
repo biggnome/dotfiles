@@ -129,8 +129,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='lvim'
+export VISUAL='lvim'
 export PAGER='batcat'
 export MANPAGER='most'
 export MICRO_TRUECOLOR=1
