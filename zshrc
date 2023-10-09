@@ -143,10 +143,9 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Pretty!
-alias ls='lsd'  # formerly colorls
-alias grep='grep --color=auto'
-alias egrep='egrep --color=auto'
-alias fgrep='fgrep --color=auto'
+alias ls='lsd'      # formerly colorls
+alias grep='rga'    # formerly 'grep --color=auto'
+alias rg='rga'
 function chpwd() {  # ls that sucker whenever working directory changes
     lsd
 }
@@ -174,6 +173,7 @@ alias readme='glow README.md'
 alias zsh-config='lvim ~/.zshrc && exec zsh'
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
 alias osxclean="/bin/find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
+alias winclean="/bin/find . -type f -name '*Thumbs.db' -ls -delete"  # Clean up junk files from Windows
 # alias alac-config='lvim ~/.config/alacritty/alacritty.yml'
 alias kitty-config='lvim ~/.config/kitty/kitty.conf'
 # alias conky-config='lvim ~/.config/conky/conky.conf'
