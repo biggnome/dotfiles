@@ -144,11 +144,13 @@ source $ZSH/oh-my-zsh.sh
 
 # Pretty!
 alias ls='lsd'      # formerly colorls
-alias grep='rga'    # formerly 'grep --color=auto'
-alias rg='rga'
 function chpwd() {  # ls that sucker whenever working directory changes
     lsd
 }
+alias umoria='umoria-color'
+# grep 2 ripgrep-all
+alias grep='rga'    # formerly 'grep --color=auto'
+alias rg='rga'
 # Human-readable sizes
 alias df='df -h'
 alias free='free -h'
@@ -181,8 +183,6 @@ alias kitty-config='lvim ~/.config/kitty/kitty.conf'
 alias powertop='sudo powertop'
 alias weather='curl https://wttr.in/'
 alias makedep='sudo pacman -D --asdeps'
-# Wanton frivolity
-alias umoria='umoria ~/.local/share/games/umoria/moria-save'    # Load saved game from local directory
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
