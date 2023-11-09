@@ -86,6 +86,18 @@ vim.opt.conceallevel = 2
 -- ** Keybindings **
 -- *****************
 
+-- Saner navigation
+lvim.keys.normal_mode["<Down>"] = "gj"
+lvim.keys.normal_mode["j"] = "gj"
+lvim.keys.normal_mode["<Up>"] = "gk"
+lvim.keys.normal_mode["k"] = "gk"
+lvim.keys.visual_mode["<Down>"] = "gj"
+lvim.keys.visual_mode["j"] = "gj"
+lvim.keys.visual_mode["<Up>"] = "gk"
+lvim.keys.visual_mode["k"] = "gk"
+lvim.keys.insert_mode["<Down>"] = "<esc>gja"
+lvim.keys.insert_mode["<Up>"] = "<esc>gka"
+
 -- Toggle word wrap
 lvim.keys.normal_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
 lvim.keys.visual_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
