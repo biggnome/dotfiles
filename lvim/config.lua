@@ -121,4 +121,5 @@ lvim.keys.insert_mode["<M-S-]>"] = "”"
 
 -- Save & compile SILE document
 lvim.keys.normal_mode["<C-b>"] = ":w<CR>:!sile '%'<CR>"
+lvim.keys.insert_mode["<C-b>"] = "<esc>:w<CR>:!sile '%'<CR>"
 
