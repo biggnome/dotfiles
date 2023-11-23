@@ -123,3 +123,6 @@ lvim.keys.insert_mode["<M-S-]>"] = "”"
 lvim.keys.normal_mode["<C-b>"] = ":w<CR>:!sile '%'<CR>"
 lvim.keys.insert_mode["<C-b>"] = "<esc>:w<CR>:!sile '%'<CR>"
 
+-- Lazyass backslash
+lvim.keys.normal_mode["\\"] = "i\\"
+
