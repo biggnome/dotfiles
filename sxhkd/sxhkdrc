@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+	wezterm
 
 
 #
@@ -26,7 +26,7 @@ super + n
 super + b
 	brave-browser
 # reload sxhkd´s configuration files
-super + ctrl + Escape
+super + alt + Escape
 	pkill -USR1 -x sxhkd
 
 #
