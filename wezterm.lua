@@ -10,6 +10,30 @@ if wezterm.config_builder then
   config = wezterm.config_builder()
 end
 
+-- This is where you actually apply your config choices
+
+-- For example, changing the color scheme:
+config.color_scheme = 'Tokyo Night Storm'
+config.window_background_opacity = 0.925
+config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.font_size = 10.5
+config.use_fancy_tab_bar = true
+config.hide_tab_bar_if_only_one_tab = true
+config.initial_cols = 120
+config.initial_rows = 36
+config.skip_close_confirmation_for_processes_named = {
+  'bash',
+  'sh',
+  'zsh',
+  'fish',
+  'tmux',
+  'nu',
+  'cmd.exe',
+  'pwsh.exe',
+  'powershell.exe',
+}
+
+-- color/display stuff
 config.window_frame = {
   -- The font used in the tab bar.
   -- Roboto Bold is the default; this font is bundled
@@ -21,7 +45,7 @@ config.window_frame = {
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
-  font_size = 10.5,
+  font_size = 8,
 
   -- The overall background color of the tab bar when
   -- the window is focused
@@ -105,18 +129,5 @@ config.colors = {
     },
   },
 }
-
--- This is where you actually apply your config choices
-
--- For example, changing the color scheme:
-config.color_scheme = 'Tokyo Night Storm'
-config.window_background_opacity = 0.925
-config.font = wezterm.font 'JetBrainsMono Nerd Font'
-config.font_size = 10.5
-config.use_fancy_tab_bar = true
-config.hide_tab_bar_if_only_one_tab = true
-config.initial_cols = 120
-config.initial_rows = 36
-
 -- and finally, return the configuration to wezterm
 return config
