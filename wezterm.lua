@@ -14,24 +14,40 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Tokyo Night Storm'
-config.window_background_opacity = 0.925
-config.font = wezterm.font 'JetBrainsMono Nerd Font'
+config.font = wezterm.font_with_fallback {
+    'Monaspace Argon',
+    'JetBrainsMono Nerd Font',
+}
 config.font_size = 10.5
-config.use_fancy_tab_bar = true
+config.harfbuzz_features = {
+    'calt=1',
+    'liga=1',
+    'dlig=1',
+    'ss01=0',
+    'ss02=1',
+    'ss03=1',
+    'ss04=1',
+    'ss05=1',
+    'ss06=1',
+    'ss07=1',
+    'ss08=1'
+}
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 120
 config.initial_rows = 36
 config.skip_close_confirmation_for_processes_named = {
-  'bash',
-  'sh',
-  'zsh',
-  'fish',
-  'tmux',
-  'nu',
-  'cmd.exe',
-  'pwsh.exe',
-  'powershell.exe',
+    'bash',
+    'sh',
+    'zsh',
+    'fish',
+    'tmux',
+    'nu',
+    'cmd.exe',
+    'pwsh.exe',
+    'powershell.exe',
 }
+config.use_fancy_tab_bar = true
+config.window_background_opacity = 0.925
 
 -- color/display stuff
 config.window_frame = {
@@ -45,7 +61,7 @@ config.window_frame = {
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
-  font_size = 8,
+  font_size = 10.5,
 
   -- The overall background color of the tab bar when
   -- the window is focused
@@ -55,7 +71,12 @@ config.window_frame = {
   -- the window is not focused
   -- inactive_titlebar_bg = '#24283b',
 }
-
+config.window_padding = {
+    left    = 0,
+    right   = 0,
+    top     = 0,
+    bottom  = 0,
+}
 config.colors = {
   tab_bar = {
     -- The color of the strip that goes along the top of the window

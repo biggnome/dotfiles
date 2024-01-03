@@ -1,6 +1,4 @@
 #! /bin/sh
-xrandr --output Virtual1 --scale 0.75x0.75
-
 bspc monitor -d I II III IV V VI VII VIII IX X
 
 bspc config border_width         1
@@ -30,8 +28,8 @@ done
 
 $HOME/.local/bin/writeupdates.sh
 picom &
-nitrogen --restore
 $HOME/.config/polybar/launch.sh
+nitrogen --restore
 
 lxpolkit &
 pkill -USR1 -x sxhkd
