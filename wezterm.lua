@@ -16,15 +16,9 @@ end
 config.color_scheme = 'Tokyo Night Storm'
 config.font = wezterm.font_with_fallback {
     'Monaspace Argon',
-<<<<<<< HEAD
-    'JetBrainsMono Nerd Font',
-}
-config.font_size = 10.5
-=======
     'JetBrainsMono Nerd Font'
 }
 config.font_size = 12
->>>>>>> 1b30f195d8c26c63e8167b3ba4a9138c9a2e030b
 config.harfbuzz_features = {
     'calt=1',
     'liga=1',
@@ -36,11 +30,7 @@ config.harfbuzz_features = {
     'ss05=1',
     'ss06=1',
     'ss07=1',
-<<<<<<< HEAD
-    'ss08=1'
-=======
     'ss08=1',
->>>>>>> 1b30f195d8c26c63e8167b3ba4a9138c9a2e030b
 }
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 120
@@ -71,11 +61,7 @@ config.window_frame = {
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
-<<<<<<< HEAD
-  font_size = 10.5,
-=======
   font_size = 11,
->>>>>>> 1b30f195d8c26c63e8167b3ba4a9138c9a2e030b
 
   -- The overall background color of the tab bar when
   -- the window is focused
