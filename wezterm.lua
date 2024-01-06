@@ -21,14 +21,14 @@ config.font = wezterm.font_with_fallback {
 config.font_size = 12
 config.harfbuzz_features = {
     'calt=1',
-    'liga=1',
-    'dlig=1',
+    'liga=0',
+    'dlig=0',
     'ss01=0',
     'ss02=1',
     'ss03=1',
     'ss04=1',
     'ss05=1',
-    'ss06=1',
+    'ss06=0',
     'ss07=1',
     'ss08=1',
 }
