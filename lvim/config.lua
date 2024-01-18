@@ -112,6 +112,10 @@ lvim.keys.normal_mode["<Shift-y>"] = "y$"
 -- lvim.keys.normal_mode["M-Up"] = "<M-k>"
 -- lvim.keys.visual_mode["M-Up"] = "<M-k>"
 
+-- F9 to sort
+lvim.keys.visual_mode["<F9>"] = ":sort<CR>"
+lvim.keys.visual_mode["<S-F9>"] = ":sort!<CR>"
+
 -- Curly quotes (WIP)
 lvim.keys.insert_mode["<M-'>"] = "’"
 lvim.keys.insert_mode["<M-[>"] = "‘"
