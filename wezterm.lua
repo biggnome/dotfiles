@@ -72,10 +72,10 @@ config.window_frame = {
   -- inactive_titlebar_bg = '#24283b',
 }
 config.window_padding = {
-    left    = 0,
-    right   = 0,
-    top     = 0,
-    bottom  = 0,
+    left    = 3,
+    right   = 3,
+    top     = 3,
+    bottom  = 3,
 }
 config.colors = {
   tab_bar = {

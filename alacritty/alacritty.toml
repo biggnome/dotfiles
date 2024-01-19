@@ -1,0 +1,73 @@
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[colors.bright]
+black = "0x707a8c"
+blue = "0x39bae6"
+cyan = "0x95e6cb"
+green = "0x86b300"
+magenta = "0xa37acc"
+red = "0xf51818"
+white = "0xfafafa"
+yellow = "0xfa8d3e"
+
+[colors.cursor]
+cursor = "0xfbfcfc"
+text = "0xff271d"
+
+[colors.dim]
+black = "0x31363b"
+blue = "0x1b668f"
+cyan = "0x186c60"
+green = "0x17a262"
+magenta = "0x614a73"
+red = "0x783228"
+white = "0x63686d"
+yellow = "0xb65619"
+
+[colors.normal]
+black = "0x232834"
+blue = "0x5ccfe6"
+cyan = "0x95e6cb"
+green = "0xbae67e"
+magenta = "0xd4bfff"
+red = "0xff3333"
+white = "0xcbccc6"
+yellow = "0xffa759"
+
+[colors.primary]
+background = "0x1f2430"
+foreground = "0xcbccc6"
+
+[cursor]
+unfocused_hollow = true
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 11
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+
+[window]
+dynamic_padding = true
+opacity = 0.925
+
+[window.class]
+general = "Alacritty"
+instance = "Alacritty"
+
+[window.padding]
+x = 3
+y = 3
