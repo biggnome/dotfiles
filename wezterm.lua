@@ -14,8 +14,8 @@ end
 
 -- For example, changing the color scheme:
 config.color_scheme = 'Tokyo Night Storm'
-config.font = wezterm.font_with_fallback {
-    'Monaspace Argon',
+config.font = wezterm.font( 'Monaspace Argon', { weight = 'Medium' })
+wezterm.font_with_fallback {
     'JetBrainsMono Nerd Font'
 }
 config.font_size = 12
@@ -57,7 +57,7 @@ config.window_frame = {
   -- Whatever font is selected here, it will have the
   -- main font setting appended to it to pick up any
   -- fallback fonts you may have used there.
-  font = wezterm.font { family = 'Monaspace Neon', weight="Bold" },
+  -- font = wezterm.font { family = 'Monaspace Neon SemiWide', weight="Bold" },
 
   -- The size of the font in the tab bar.
   -- Default to 10.0 on Windows but 12.0 on other systems
