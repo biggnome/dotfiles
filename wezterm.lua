@@ -16,7 +16,8 @@ end
 config.color_scheme = 'Tokyo Night Storm'
 config.font = wezterm.font( 'Monaspace Argon', { weight = 500 })
 wezterm.font_with_fallback {
-    'JetBrainsMono Nerd Font'
+    'JetBrains Mono',
+    'Symbols Nerd Font'
 }
 config.warn_about_missing_glyphs = false
 config.font_size = 12
