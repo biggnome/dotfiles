@@ -164,25 +164,27 @@ alias vim='lvim'        # ....
 alias nvim='lvim'       # ..
 alias vimdiff='lvim -d' # .
 alias ed='lvim'         # "standard", my foot
-alias mkdir='mkdir -p'
+alias clear-orphans='paru -Qtdq | paru -Rns -'
 alias fd='fd -H -E /timeshift/ -E /run/timeshift/'      # Exclude backups from fd
 alias find='fd -H -E /timeshift/ -E /run/timeshift/'    # Replace 'find' with faster 'fd'
 alias ack='ag'
 alias cat='bat'
 alias less='bat'
 alias more='bat'
-alias readme='glow README.md'
-alias zsh-config='lvim ~/.zshrc && exec zsh'
-alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
+alias makedep='sudo paru -D --asdeps'
+alias mkdir='mkdir -p'
+alias makeplug='make && make dist'
+alias powertop='sudo powertop'
 alias osxclean="/bin/find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
 alias winclean="/bin/find . -type f -name '*Thumbs.db' -ls -delete"  # Clean up junk files from Windows
+alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
+alias readme='glow README.md'
+alias weather='curl https://wttr.in/'
+alias zsh-config='lvim ~/.zshrc && exec zsh'
 # alias alac-config='lvim ~/.config/alacritty/alacritty.yml'
 alias kitty-config='lvim ~/.config/kitty/kitty.conf'
 # alias conky-config='lvim ~/.config/conky/conky.conf'
 # alias conky-reload='killall conky && ~/.config/conky/./autostart'
-alias powertop='sudo powertop'
-alias weather='curl https://wttr.in/'
-alias makedep='sudo pacman -D --asdeps'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
