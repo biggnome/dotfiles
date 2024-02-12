@@ -15,24 +15,28 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = 'Tokyo Night Storm'
 config.font = wezterm.font_with_fallback {
-    'Monaspace Argon',
+    {
+        family = 'Monaspace Argon',
+        weight = 500 ,
+        harfbuzz_features = {
+            'calt=1',
+            'liga=0',
+            'dlig=0',
+            'ss01=0',
+            'ss02=1',
+            'ss03=1',
+            'ss04=1',
+            'ss05=1',
+            'ss06=0',
+            'ss07=1',
+            'ss08=1',
+        },
+    },
     'Symbols Nerd Font',
+    -- 'JetBrains Mono',
 }
 config.warn_about_missing_glyphs = false
 config.font_size = 12
-config.harfbuzz_features = {
-    'calt=1',
-    'liga=0',
-    'dlig=0',
-    'ss01=0',
-    'ss02=1',
-    'ss03=1',
-    'ss04=1',
-    'ss05=1',
-    'ss06=0',
-    'ss07=1',
-    'ss08=1',
-}
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 120
 config.initial_rows = 36
