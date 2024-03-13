@@ -112,6 +112,10 @@ lvim.keys.normal_mode["<Shift-y>"] = "y$"
 -- lvim.keys.normal_mode["M-Up"] = "<M-k>"
 -- lvim.keys.visual_mode["M-Up"] = "<M-k>"
 
+-- F5/F6 to find misspelled
+lvim.keys.normal_mode["<F6>"] = "]s"
+lvim.keys.normal_mode["<F5>"] = "[s"
+
 -- F9 to sort
 lvim.keys.visual_mode["<F9>"] = ":sort<CR>"
 lvim.keys.visual_mode["<S-F9>"] = ":sort!<CR>"
@@ -120,8 +124,8 @@ lvim.keys.visual_mode["<S-F9>"] = ":sort!<CR>"
 lvim.keys.insert_mode["<M-'>"] = "’"
 lvim.keys.insert_mode["<M-[>"] = "‘"
 lvim.keys.insert_mode["<M-]>"] = "’"
-lvim.keys.insert_mode["<M-S-[>"] = "“"
-lvim.keys.insert_mode["<M-S-]>"] = "”"
+lvim.keys.insert_mode["<M-{>"] = "“"
+lvim.keys.insert_mode["<M-}>"] = "”"
 
 -- Save & compile SILE document
 lvim.keys.normal_mode["<C-b>"] = ":w<CR>:!sile '%'<CR>"
