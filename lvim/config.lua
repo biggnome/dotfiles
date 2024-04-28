@@ -81,6 +81,21 @@ vim.opt.spelllang = "en_us"
 -- Markdown stuff
 vim.opt.conceallevel = 2
 
+-- System clipboard copy/paste
+vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+  name = 'wl-clipboard',
+  copy = {
+    ['+'] = 'wl-copy',
+    ['*'] = 'wl-copy -p',
+  },
+  paste = {
+    ['+'] = 'wl-paste',
+    ['*'] = 'wl-paste -p',
+  },
+  cache_enabled = true,
+}
+
 
 -- *****************
 -- ** Keybindings **
