@@ -82,16 +82,14 @@ vim.opt.spelllang = "en_us"
 vim.opt.conceallevel = 2
 
 -- System clipboard copy/paste
-vim.opt.clipboard = "unnamedplus"
 vim.g.clipboard = {
-  name = 'wl-clipboard',
   copy = {
-    ['+'] = 'wl-copy',
-    ['*'] = 'wl-copy -p',
+    ['+'] = 'wl-copy --trim-newline',
+    ['*'] = 'wl-copy --trim-newline',
   },
   paste = {
-    ['+'] = 'wl-paste',
-    ['*'] = 'wl-paste -p',
+    ['+'] = 'wl-paste --no-newline',
+    ['*'] = 'wl-paste ---no-newline',
   },
   cache_enabled = true,
 }
