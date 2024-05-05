@@ -84,12 +84,12 @@ vim.opt.conceallevel = 2
 -- System clipboard copy/paste
 vim.g.clipboard = {
   copy = {
-    ['+'] = 'wl-copy --trim-newline',
-    ['*'] = 'wl-copy --trim-newline',
+    ['+'] = 'wl-copy',
+    ['*'] = 'wl-copy',
   },
   paste = {
-    ['+'] = 'wl-paste --no-newline',
-    ['*'] = 'wl-paste ---no-newline',
+    ['+'] = 'wl-paste',
+    ['*'] = 'wl-paste',
   },
   cache_enabled = true,
 }
