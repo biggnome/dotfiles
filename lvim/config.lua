@@ -56,6 +56,7 @@ require("colorizer").setup {
 lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
 -- lvim.transparent_window = true
+vim.api.nvim_set_hl(0, "SpellBad", { fg = "LightRed" })
 
 -- SILE comments
 local ft = require('Comment.ft')
