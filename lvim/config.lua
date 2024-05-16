@@ -77,7 +77,7 @@ vim.opt.tabstop = 4
 
 -- Spellhceck!
 vim.opt.spell = true
-vim.opt.spelllang = "en_us"
+vim.opt.spelllang = "en_us,en_gb,de_de,fr_fr"
 
 -- Markdown stuff
 vim.opt.conceallevel = 2
