@@ -56,7 +56,20 @@ require("colorizer").setup {
 lvim.colorscheme = "tokyonight-moon"
 require("scrollbar").setup()
 -- lvim.transparent_window = true
-vim.api.nvim_set_hl(0, "SpellBad", { fg = "LightRed" })
+lvim.autocommands = {
+  {
+    { "ColorScheme" },
+    {
+      pattern = "*",
+      callback = function()
+        -- change `Normal` to the group you want to change
+        -- and `#ffffff` to the color you want
+        -- see `:h nvim_set_hl` for more options
+        vim.api.nvim_set_hl(0, "SpellBad", { fg = "LightRed", underline = true })
+      end,
+    },
+  },
+}
 
 -- SILE comments
 local ft = require('Comment.ft')
@@ -77,7 +90,7 @@ vim.opt.tabstop = 4
 
 -- Spellhceck!
 vim.opt.spell = true
-vim.opt.spelllang = "en_us,en_gb,de_de,fr_fr"
+vim.opt.spelllang = "en_us,en_gb,de,fr"
 
 -- Markdown stuff
 vim.opt.conceallevel = 2
