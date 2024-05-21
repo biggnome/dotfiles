@@ -161,3 +161,6 @@ lvim.keys.insert_mode["<C-b>"] = "<esc>:w<CR>:!sile '%'<CR>"
 -- Lazyass backslash
 lvim.keys.normal_mode["\\"] = "i\\"
 
+-- Join paragraphs
+lvim.keys.normal_mode["<F8>"] = ":%s/\\(\\S\\)\\n\\(\\S\\)/\\1 \\2<CR>"
+

@@ -238,4 +238,3 @@ update-vcv ()
 # Path stuff
 export BATTALIONDATADIR='/usr/share/games/battalion.data'
 export BATTALIONSCOREDIR=$HOME/.local/share/games
-

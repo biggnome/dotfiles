@@ -16,7 +16,7 @@ end
 config.color_scheme = 'Tokyo Night Storm'
 config.font = wezterm.font_with_fallback {
     {
-        family = 'Monaspace Argon',
+        family = 'Monaspace Neon',
         weight = 500 ,
         harfbuzz_features = {
             'calt=1',
