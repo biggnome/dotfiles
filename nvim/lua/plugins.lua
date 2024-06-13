@@ -62,7 +62,12 @@ return require('packer').startup(function(use)
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
-        end,
+    -- See `:help nvim-treesitter`
+    require('nvim-treesitter.configs').setup {
+        -- Add languages to be installed here that you want installed for treesitter
+        ensure_installed = { 'c', 'cpp', 'go', 'lua', 'python', 'rust', 'typescript', 'help', 'cmake', 'vim' },
+    }
+    end,
     }
     -- Vifm
     use 'vifm/vifm.vim'
