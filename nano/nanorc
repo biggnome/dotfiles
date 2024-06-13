@@ -227,40 +227,16 @@ bind Sh-M-U "^[Oc^[[1;6D^T|sed 's/.*/\U&/'^M" main
 bind Sh-M-L "^[Oc^[[1;6D^T|sed 's/.*/\L&/'^M" main
 
 ## Keybindings
-unbind ^C all
-unbind ^K main
-unbind ^N main
-unbind ^U all
-unbind ^Y all
-unbind ^Z main
+unbind F6 main
+unbind F12 main
+unbind M-S all
+unbind M-Z all
 
-unbind M-J main
-unbind M-T main
-unbind M-Y main
-
-bind ^A mark main
-bind ^B wherewas all
-bind ^C copy main
-bind ^D findprevious all
-bind ^F whereis all
-bind ^G findnext all
-bind ^O insert main
-bind ^P location main
-bind ^Q exit all
-bind ^R replace main
-bind ^S savefile main
-bind ^T gotoline main
-bind ^T gotodir browser
-bind ^V paste all
-bind ^W writeout main
-bind ^X cut all
-bind ^Y redo main
-bind ^Z undo main
+#bind ^B wherewas all
+#bind ^O insert main
+#bind ^T gotodir browser
 bind ^/ help all
 bind ^/ exit help
 
-bind M-X cancel all
-bind M-U undo main
-bind M-R redo main
-bind M-Y speller main
-bind Sh-M-Z suspend all
+bind F6 speller main
+bind M-Z softwrap all
