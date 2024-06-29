@@ -226,6 +226,22 @@ ext ()
   fi
 }
 
+# Launch minivmac w/correct-ish settings
+minivmac ()
+{
+    case $2 in
+        -128k)      /bin/minivmac-128k ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/64k/Mac128K.ROM      ;;
+        -512ke)     /bin/minivmac-512ke ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/64k/Mac512K.ROM     ;;
+        -classic)   /bin/minivmac-classic ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/512k/Classic.ROM  ;;
+        -ii)        /bin/minivmac-ii ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/256k/MacII.ROM         ;;
+        -plus)      /bin/minivmac-plus ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/128k/MacPlus.ROM     ;;
+        -se)        /bin/minivmac-se ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/256k/MacSE.ROM         ;;
+        -sefdhd)    /bin/minivmac-sefdhd ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/256k/SEFDHD.ROM    ;;
+        *)          /bin/minivmac ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/vMac.ROM                  ;;
+    esac
+    # /bin/minivmac$2 ~/.local/share/vMac/disk1.dsk $1 -r ~/.local/share/vMac/vMac.ROM
+}
+
 update-vcv ()
 {
     sudo rm /usr/lib/vst/VCV*
