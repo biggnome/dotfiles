@@ -98,12 +98,12 @@ vim.opt.conceallevel = 2
 -- System clipboard copy/paste
 vim.g.clipboard = {
   copy = {
-    ['+'] = 'wl-copy',
-    ['*'] = 'wl-copy',
+    ['+'] = 'wl-copy --trim-newline',
+    ['*'] = 'wl-copy --trim-newline',
   },
   paste = {
-    ['+'] = 'wl-paste',
-    ['*'] = 'wl-paste',
+    ['+'] = 'wl-paste --no-newline',
+    ['*'] = 'wl-paste --no-newline',
   },
   cache_enabled = true,
 }
@@ -144,8 +144,10 @@ lvim.keys.normal_mode["<F6>"] = "]s"
 lvim.keys.normal_mode["<F5>"] = "[s"
 
 -- F9 to sort
-lvim.keys.visual_mode["<F9>"] = ":sort<CR>"
-lvim.keys.visual_mode["<S-F9>"] = ":sort!<CR>"
+lvim.keys.visual_mode["<F9>"] = ":sort i<CR>"
+lvim.keys.visual_mode["<S-F9>"] = ":sort! i<CR>"
+lvim.keys.visual_mode["<F21>"] = ":sort! i<CR>"
+
 
 -- Curly quotes (WIP)
 lvim.keys.insert_mode["<M-'>"] = "’"
@@ -161,6 +163,5 @@ lvim.keys.insert_mode["<C-b>"] = "<esc>:w<CR>:!sile '%'<CR>"
 -- Lazyass backslash
 lvim.keys.normal_mode["\\"] = "i\\"
 
--- Join paragraphs
-lvim.keys.normal_mode["<F8>"] = ":%s/\\(\\S\\)\\n\\(\\S\\)/\\1 \\2<CR>"
-
+-- Non-breaking space
+lvim.keys.insert_mode["<S-Space>"] = " "
