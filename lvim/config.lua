@@ -98,12 +98,12 @@ vim.opt.conceallevel = 2
 -- System clipboard copy/paste
 vim.g.clipboard = {
   copy = {
-    ['+'] = 'wl-copy --trim-newline',
-    ['*'] = 'wl-copy --trim-newline',
+    ['+'] = 'wl-copy',
+    ['*'] = 'wl-copy',
   },
   paste = {
-    ['+'] = 'wl-paste --no-newline',
-    ['*'] = 'wl-paste --no-newline',
+    ['+'] = 'wl-paste',
+    ['*'] = 'wl-paste',
   },
   cache_enabled = true,
 }
@@ -132,6 +132,13 @@ lvim.keys.insert_mode["<M-z>"] = "<esc>:set wrap! lbr<CR>"
 
 -- Copy to EOL
 lvim.keys.normal_mode["<Shift-y>"] = "y$"
+
+-- "x" in Normal Mode & "d" deletes w/o copying
+lvim.keys.normal_mode["x"] = "\"_x"
+lvim.keys.normal_mode["d"] = "\"_d"
+lvim.keys.visual_mode["d"] = "\"_d"
+lvim.keys.normal_mode["<S-d>"] = "\"_<S-d>"
+lvim.keys.visual_mode["<S-d>"] = "\"_<S-d>"
 
 -- Move line(s) up/down
 -- lvim.keys.visual_mode["M-Down"] = "<M-j>"
