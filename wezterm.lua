@@ -16,7 +16,7 @@ end
 config.color_scheme = 'Tokyo Night Storm'
 config.font = wezterm.font_with_fallback {
     {
-        family = 'Monaspace Neon',
+        family = 'Monaspace Neon Var',
         weight = 500 ,
         harfbuzz_features = {
             'calt=1',
@@ -38,7 +38,7 @@ config.font = wezterm.font_with_fallback {
     -- 'JetBrains Mono',
 }
 config.warn_about_missing_glyphs = false
-config.font_size = 12
+config.font_size = 14
 config.hide_tab_bar_if_only_one_tab = true
 config.initial_cols = 120
 config.initial_rows = 36
@@ -54,6 +54,7 @@ config.skip_close_confirmation_for_processes_named = {
     'powershell.exe',
 }
 config.use_fancy_tab_bar = true
+config.macos_window_background_blur = 20
 config.window_background_opacity = 0.925
 
 -- color/display stuff
