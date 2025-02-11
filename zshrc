@@ -253,6 +253,14 @@ update-vcv ()
     echo "VCV Rack update complete (unless you did something really dumb...you didn't, did you?)"
 }
 
+function yazi() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	/bin/yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 # Path stuff
 export BATTALIONDATADIR='/usr/share/games/battalion.data'
 export BATTALIONSCOREDIR=$HOME/.local/share/games
