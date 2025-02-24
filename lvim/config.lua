@@ -21,7 +21,10 @@ lvim.plugins = {
         })
         end,
     },
-    
+
+    -- Decasify
+    { "alerque/decasify" },
+
     -- Sile syntax highlighting
     { "sile-typesetter/vim-sile" },
     
@@ -155,6 +158,9 @@ lvim.keys.visual_mode["<F9>"] = ":sort i<CR>"
 lvim.keys.visual_mode["<S-F9>"] = ":sort! i<CR>"
 lvim.keys.visual_mode["<F21>"] = ":sort! i<CR>"
 
+-- Decasify
+lvim.keys.visual_mode["<M-t>"] = ":Decasify<CR>"
+lvim.keys.visual_mode["<M-T>"] = ":Decasify upper<CR>"
 
 -- Curly quotes (WIP)
 lvim.keys.insert_mode["<M-'>"] = "’"
