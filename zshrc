@@ -245,8 +245,12 @@ minivmac ()
 
 update-vcv ()
 {
-    run0 rm /usr/lib/vst/VCV*
-    run0 mv $1/*.so /usr/lib/vst
+    # run0 rm /usr/lib/vst/VCV*
+    # run0 mv $1/*.so /usr/lib/vst
+    # run0 rm /usr/lib/vst3/VCV*
+    # run0 mv $1/*.vst3 /usr/lib/vst3
+    run0 rm /usr/lib/clap/VCV*
+    run0 mv $1/*.clap /usr/lib/clap
     run0 rm -rf /opt/VCV/Rack2Pro
     run0 mv $1/Rack2Pro /opt/VCV/
     rm -rf $1
