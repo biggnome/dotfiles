@@ -249,10 +249,10 @@ update-vcv ()
     # run0 mv $1/*.so /usr/lib/vst
     # run0 rm /usr/lib/vst3/VCV*
     # run0 mv $1/*.vst3 /usr/lib/vst3
-    run0 rm /usr/lib/clap/VCV*
-    run0 mv $1/*.clap /usr/lib/clap
-    run0 rm -rf /opt/VCV/Rack2Pro
-    run0 mv $1/Rack2Pro /opt/VCV/
+    sudo rm /usr/lib/clap/VCV*
+    sudo mv $1/*.clap /usr/lib/clap
+    sudo rm -rf /opt/VCV/Rack2Pro
+    sudo mv $1/Rack2Pro /opt/VCV/
     rm -rf $1
     echo "VCV Rack update complete (unless you did something really dumb...you didn't, did you?)"
 }

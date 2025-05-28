@@ -83,7 +83,9 @@ vim.opt.list = true
 vim.opt.listchars = {
         tab = "⯈ ",
         trail = "⋅",
-        nbsp = "+"
+        nbsp = "+",
+        multispace = ".",
+        leadmultispace = " "
 }
 
 -- Tabs/spacing
