@@ -265,6 +265,15 @@ function yazi() {
 	fi
 	rm -f -- "$tmp"
 }
+
+# Build ZL Audio plugins from source
+zlbuild ()
+{
+    git submodule update --init --recursive
+    cmake -B Builds -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DKFR_ENABLE_MULTIARCH=OFF -DZL_JUCE_FORMATS="VST3" .
+    cmake --build Builds --config Release
+}
+
 # Path stuff
 export BATTALIONDATADIR='/usr/share/games/battalion.data'
 export BATTALIONSCOREDIR=$HOME/.local/share/games
