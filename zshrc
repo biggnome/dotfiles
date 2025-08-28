@@ -173,15 +173,15 @@ alias ack='ag'
 alias cat='bat'
 alias less='bat'
 alias more='bat'
-alias makedep='run0 paru -D --asdeps'
+alias makedep='sudo paru -D --asdeps'
 alias mkdir='mkdir -p'
 alias makeplug='make && make dist && mv dist/*.vcvplugin ~/Public/'
 alias nano='nano --modernbindings'
-alias powertop='run0 powertop'
+alias powertop='sudo powertop'
 alias osxclean="/bin/find . -type f -name '*.DS_Store' -ls -delete"  # Clean up junk files from OS X
 alias winclean="/bin/find . -type f -name '*Thumbs.db' -ls -delete"  # Clean up junk files from Windows
 alias powerpellet='sudo pacman-mirrors -f0 && sudo pacman -Syyu && sudo pacman -Sc' # Refresh pacman mirrors, update repositories, tidy up
-alias sudo="run0"
+# alias sudo="run0"
 alias readme='glow README.md'
 alias weather='curl https://wttr.in/'
 alias yt-aac='yt-dlp -x --audio-format aac'
@@ -247,10 +247,10 @@ minivmac ()
 
 update-vcv ()
 {
-    # run0 rm /usr/lib/vst/VCV*
-    # run0 mv $1/*.so /usr/lib/vst
-    # run0 rm /usr/lib/vst3/VCV*
-    # run0 mv $1/*.vst3 /usr/lib/vst3
+    # sudo rm /usr/lib/vst/VCV*
+    # sudo mv $1/*.so /usr/lib/vst
+    # sudo rm /usr/lib/vst3/VCV*
+    # sudo mv $1/*.vst3 /usr/lib/vst3
     sudo rm /usr/lib/clap/VCV*
     sudo mv $1/*.clap /usr/lib/clap
     sudo rm -rf /opt/VCV/Rack2Pro
