@@ -1,0 +1,3 @@
+#!/bin/bash
+
+for i in * ; do touch -d ${i:19:8} $i; done
