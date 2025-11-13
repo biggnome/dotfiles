@@ -19,4 +19,4 @@ font-feature            = -cv60
 font-feature            = -cv61
 keybind                 = ctrl+shift+h=new_split:right
 keybind                 = ctrl+shift+w=close_surface
-theme                   = tokyonight-storm
+theme                   = TokyoNight Storm
