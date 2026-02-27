@@ -269,6 +269,13 @@ function yazi() {
 	rm -f -- "$tmp"
 }
 
+# Build QDelay from source
+qbuild ()
+{
+    cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -S . -B ./build
+    cmake --build ./build --config Release
+}
+
 # Build ZL Audio plugins from source
 zlbuild ()
 {
