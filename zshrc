@@ -269,8 +269,8 @@ function yazi() {
 	rm -f -- "$tmp"
 }
 
-# Build QDelay from source
-qbuild ()
+# Build Tilr plugins from source
+tlbuild ()
 {
     cmake -G "Unix Makefiles" -DCMAKE_BUILD_TYPE=Release -S . -B ./build
     cmake --build ./build --config Release
