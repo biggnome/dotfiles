@@ -282,7 +282,7 @@ tlbuild ()
 zlbuild ()
 {
     git submodule update --init --recursive
-    cmake -B Builds -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DKFR_ENABLE_MULTIARCH=OFF -DZL_JUCE_FORMATS="VST3" -DZL_EQ_BAND_NUM=16 .
+    cmake -B Builds -G Ninja -DCMAKE_BUILD_TYPE=Release -DCMAKE_C_COMPILER=clang -DCMAKE_CXX_COMPILER=clang++ -DKFR_ENABLE_MULTIARCH=OFF -DZL_JUCE_FORMATS="VST3" -DZL_HWY_STATIC_TARGET="SSE4" -DZL_EQ_BAND_NUM=16 .
     cmake --build Builds --config Release
 }
 
