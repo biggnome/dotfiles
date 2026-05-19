@@ -222,6 +222,7 @@ ext ()
       *.tar.xz)     tar xf $1   ;;
       *.tar.zst)    unzstd $1   ;;
       *.tbz2)       tar xjf $1  ;;
+      *.tgz)        tar xzf $1  ;;
       *.tzst)       unzstd $1   ;;
       *.Z)          uncompress $1   ;;
       *.zip)        unzip $1    ;;
