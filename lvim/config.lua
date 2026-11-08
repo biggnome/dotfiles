@@ -12,15 +12,6 @@ lvim.plugins = {
     
     -- Scrollbar
     { "petertriho/nvim-scrollbar" },
-    { "kevinhwang91/nvim-hlslens",
-        config = function()
-        -- require('hlslens').setup() is not required
-        require("scrollbar.handlers.search").setup({
-          -- hlslens config overrides
-          override_lens = function() end,
-        })
-        end,
-    },
 
     -- Decasify
     { "alerque/decasify" },
